@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe Section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* 1. General Setup */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        
+        .subscribe-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://thumbs.dreamstime.com/z/graph-computer-laptop-close-up-laptop-graphs-diagrams-charts-screen-table-124227613.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+            z-index: -1;
+        }
+        .subscribe-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .subscribe-section p.subtext {
+            font-size: 1rem;
+            color: #ddd;
+            margin-bottom: 40px;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+        .form-box {
+            display: flex;
+            justify-content: center;
+            gap: 15px; 
+            width: 100%;
+            max-width: 700px;
+            margin-bottom: 40px;
+            flex-wrap: wrap; 
+        }
+        .email-input {
+            flex: 1; 
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1rem;
+            outline: none;
+            min-width: 250px;
+        }
+        .btn-subscribe {
+            background-color: #ffc845; 
+            color: #333;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+        .btn-subscribe:hover {
+            background-color: #e0b03d;
+        }
+        .follow-text {
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border: 2px solid rgba(255, 255, 255, 0.3); 
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        .social-link:hover {
+            background-color: #ffc845;
+            color: #333; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="subscribe-section">
+        
+        <h2>Subscribe to always be up to<br>date in our latest news!</h2>
+        
+        <p class="subtext">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt erat volutpat.
+        </p>
+
+        <div class="form-box">
+            <input type="email" class="email-input" placeholder="Enter your email..">
+            <button class="btn-subscribe">Subscribe</button>
+        </div>
+
+        <p class="follow-text">Follow us on</p>
+        
+        <div class="social-icons">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-medium-m"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+    </section>
+
+</body>
+</html>

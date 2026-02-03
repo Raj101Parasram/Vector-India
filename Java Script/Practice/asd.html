@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1>to do list</h1>
+    <button onclick="adddata()">add task</button>
+    <ul>
+
+    </ul>
+
+    <script>
+
+        function adddata(){
+    let ul=document.querySelector('ul')
+    let inp=prompt('enter a task')
+    let li=document.createElement('li')
+    li.innerHTML=inp
+    ul.append(li)
+
+    }
+    </script>
+</body>
+</html>

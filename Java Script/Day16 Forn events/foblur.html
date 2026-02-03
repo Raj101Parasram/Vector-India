@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <script>
+        let inp1= document.querySelector("input");
+        inp1.addEventListener("focus", ()=>{
+            inp1.style.border="2px solid blue";
+            inp1.style.backgroundColor="yellow";
+        })
+        inp1.addEventListener("blur", ()=>{
+            inp1.style.border=" 1px solid black";
+            inp1.style.backgroundColor="white";
+        })
+    </script>
+</body>
+</html>

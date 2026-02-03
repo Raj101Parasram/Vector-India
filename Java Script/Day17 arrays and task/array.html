@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptate dolorum laboriosam, ullam temporibus labore in consectetur necessitatibus dolor non alias cumque cum exercitationem dolores sunt corporis, rem nam deserunt!</div>
+    <script>
+        // assinging the array
+        let arr=['html','css','js','python','mongoDB']
+        console.log(arr)
+        console.log(arr[2])
+        display=arr.join(" ")
+        console.log(display)
+        document.body.innerHTML/* + */=arr+"<br>-------Join-----------<br>"+display
+        
+        // Add And Update Array Elements
+        document.body.innerHTML += "<br>-------ADD-----------"
+
+        arr[5]="ExpressJS"
+        console.log(arr)
+        document.body.innerHTML+="<br>"+arr
+        document.body.innerHTML += "<br>------------------"
+        arr[8]="ReactJS"  //6,7 are empty
+        console.log(arr)
+        document.body.innerHTML+="<br>"+arr
+        //arr.push("NodeJS")
+        //console.log(arr)
+        document.body.innerHTML += "<br>--------Update----------"
+        arr[1]="Cascading Style Sheets"
+        console.log(arr)
+        document.body.innerHTML+="<br>"+arr
+        document.body.innerHTML += "<br>------------------"
+        arr[0]="HTML"
+        console.log(arr)
+        document.body.innerHTML+= "<br>"+arr
+        
+        // Array Length
+        document.body.innerHTML += "<br>--------Length----------"
+        let s=arr.length
+        console.log("The length of the array is: "+s)
+        document.body.innerHTML+= "<br>The length of the array is: "+s
+        document.body.innerHTML += "<br>------------------"
+        console.log(arr.length)
+        document.body.innerHTML+="<br>"+ arr.length
+        
+        
+        // Array Itration
+        document.body.innerHTML += "<br>---------for lop---------"
+
+        for(i=0;i<arr.length;i++){
+            console.log(i+" : " +arr[i])
+            document.body.innerHTML += "<br>" + i + " : " + arr[i]
+        }
+        
+        // another way of itration
+        document.body.innerHTML += "<br>--------For loop----------"
+        
+        for(i in arr){
+            console.log(i+" -> "+arr[i])
+            document.body.innerHTML += "<br>" + i + "=>> " + arr[i]
+        }
+
+        for(i of arr){
+            console.log(i)
+            document.body.innerHTML += "<br>" + i
+        }
+
+        // another way of itration with while loop
+        document.body.innerHTML += "<br>---------while loop---------"
+
+        let j=0
+        while(j in arr){
+            console.log("<br>"+j+" -- " + arr[j])
+            document.body.innerHTML += "<br>" + j + " -- " + arr[j]
+            j++
+        }
+
+        // Sallow copy of array 
+        document.body.innerHTML += "<br>---------Sallow copy---------"
+
+        let a=[1,2,3,4,5]
+        let b=a
+        console.log(b)
+        document.body.innerHTML += "<br>" + b
+        document.body.innerHTML += "<br>-------b[0]=100 & a[4]=500----------"
+        b[0]=100
+        a[4]=500
+        console.log(a)
+        console.log(b)
+        document.body.innerHTML += "<br> A's Array : " + a
+        document.body.innerHTML += "<br> B's Array : " + b
+
+        // Deep Copy of Array
+        document.body.innerHTML += "<br>---------Deep copy with slice(0)---------"
+        let x=[10,20,30,40,50]
+        let y=x.slice(0)
+        console.log(y)
+        document.body.innerHTML += "<br>" + y
+        document.body.innerHTML += "<br>-------y[0]=1000 & x[4]=5000----------"
+        y[0]=1000
+        x[4]=5000
+        document.body.innerHTML += "<br> X's Array : " + x
+        document.body.innerHTML += "<br> Y's Array : " + y
+
+        document.body.innerHTML += "<br>---------Deep copy with [...x]---------"
+        y=[...x]
+        console.log(y)
+        document.body.innerHTML += "<br>" + y
+        document.body.innerHTML += "<br>-------y[2]=7000 & x[2]=9000----------"
+        y[2]='css'
+        x[2]='html'
+        document.body.innerHTML += "<br> X's Array : " + x
+        document.body.innerHTML += "<br> Y's Array : " + y
+
+    </script>
+</body>
+</html>

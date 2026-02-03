@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text">
+
+    <input type="color" id="colorPicker">
+
+    <select name="" id="skill">
+        <option value="css">css</option>
+        <option value="html">html</option>
+        <option value="js">js</option>
+    </select>
+    <div></div>
+
+    <script>
+        let inp1= document.querySelector("input");
+        inp1.addEventListener("focus", ()=>{
+            inp1.style.border="2px solid blue";
+            inp1.style.backgroundColor="yellow";
+        })
+        inp1.addEventListener("blur", ()=>{
+            inp1.style.border=" 1px solid black";
+            inp1.style.backgroundColor="white";
+        })
+        let color = document.getElementById("colorPicker");
+
+        color.addEventListener("change", (n)=>{
+            document.body.style.backgroundColor=n.target.value;
+            console.log(n.target.value);
+
+        })
+
+        let skil=document.getElementById("skill");
+        skil.addEventListener("change", (e)=>{
+            console.log(skill.value)
+            let div=document.querySelector("div")
+            div.innerHTML +=skill.value +"<br>"
+            div.innerHTML += e.target.value + "<br>";
+        })
+
+    </script>
+</body>
+</html>

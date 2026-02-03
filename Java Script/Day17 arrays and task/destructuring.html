@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructuring</title>
+</head>
+<body>
+    <script>
+        let a=[["html","css","js"],["python","mongoDB"]]
+        let [frontEnd,backEnd]=a
+        console.log(frontEnd)
+        console.log(backEnd[1])
+        let [forntend,[py,mono]]=a
+        console.log(py)
+        let [[h,c,j],[p,m]]=a
+        console.log(j)
+
+// methods
+
+        // 1 length
+        
+        let x=["ht","cs","js","pu","mo"]
+        console.log(x.length)
+
+        // 2 at()
+        console.log(x.at(2))
+        console.log(x.at(-1))
+        let y=x.at(3)
+        console.log(y)
+
+        // 3 concat()
+
+        let z=["nd","rj"]
+        let s=x.concat(z,y,a)
+        console.log(s)
+
+        // 4.1 splice() add
+
+        let arr=["html","css","js","python","mongoDB"]
+        console.log(arr)
+        arr.splice(2,0,"ExpressJS","ReactJS")
+        console.log(arr)
+
+        // 4.2 splice() update
+        arr.splice(1,2,"Cascading Style Sheets","JavaScript")
+        console.log(arr)
+
+        // 4.3 splice() delete
+        arr.splice(3,1)
+        console.log(arr)
+
+        // 5 slice()
+        
+        </script>
+</body>
+</html>

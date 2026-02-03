@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let img=document.createElement("img")
+        img.src="https://www.hollywoodreporter.com/wp-content/uploads/2012/12/img_logo_blue.jpg?w=1024"
+        img.style.width="200px"
+        img.style.height="100px"
+
+
+        let but=document.createElement("button")
+        but.innerHTML="Click"
+        document.body.append(but)
+
+        but.addEventListener("click",function Fun(){
+            document.body.append(img)
+        })
+
+        but.addEventListener("dblclick",function Fun(){
+            img.remove()
+            document.body.style.background="lightblue"
+        })
+
+        but.addEventListener("mouseover",function fun(){
+            but.style.background="black"
+            but.style.color="white"
+        })
+        but.addEventListener("mouseout",function fun(){
+            but.style.background="white"
+            but.style.color="black"
+        })
+
+        but.addEventListener("mousemove",function fun(){
+            console.log("mouse is moving over button")
+        })
+    </script>
+</body>
+</html>

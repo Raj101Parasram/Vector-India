@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contener{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 10px;
+            width: 160vh;
+            height: 50vh;
+            background-color: rgb(179, 121, 121);
+            padding: 10px;
+            grid-template-areas: 
+            "a c c d f g h"
+            "b e e e f g h "
+            "b e e e f g h"
+            ;
+        }
+        .child{
+            border: 2px solid black;
+            font-size: 30px;
+            text-align: center;
+            padding-top: 40px;
+        }
+        .child:nth-child(1){
+            grid-area: a;
+        }
+        .child:nth-child(2){
+            grid-area: b;
+        }
+        .child:nth-child(3){
+            grid-area: c;
+        }
+        .child:nth-child(4){
+            grid-area: d;
+        }
+        .child:nth-child(5){
+            grid-area: e;
+        }
+        .child:nth-child(6){
+            grid-area: f;
+        }
+        .child:nth-child(7){
+            grid-area: g;
+        }
+        .child:nth-child(8){
+            grid-area: h;
+        }
+        .contener2{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 7px;
+            height: 50vh;
+            width: 160vh;
+            grid-template-areas: 
+            "a a b b d d"
+            "e e c c c c"
+            "f f c c c c"
+            ;
+        }
+        .child2{
+            border: 1px solid wheat;
+            text-align: center;
+            font-size: 30px;
+            padding-top: 50px;
+        }
+        .child2:nth-child(1){
+            grid-area: a;
+        }
+        .child2:nth-child(2){
+            grid-area: b;
+        }
+        .child2:nth-child(3){
+            grid-area: c;
+        }
+        .child2:nth-child(4){
+            grid-area: d;
+        }
+        .child2:nth-child(5){
+            grid-area: e;
+        }
+        .child2:nth-child(6){
+            grid-area: f;
+        }
+        .contener3{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            width: 65vh;
+            height: 50vh;
+            gap: 10px;
+
+        }
+        .child3{
+            text-align: center;
+            padding-top: 50px;
+            font-size: 30px;
+            border: 2px solid wheat;
+        }
+        .child3:nth-child(1){
+            grid-column: 1/3;
+            grid-row: 1/6;
+        }
+        .child3:nth-child(2){
+            grid-column: 3/7;
+            grid-row: 1/2;
+        }
+        .child3:nth-child(3){
+            grid-column: 7/9;
+            grid-row: 1/2;
+        }
+        .child3:nth-child(4){
+            grid-column: 3/5;
+            grid-row: 2/3;
+        }
+        .child3:nth-child(5){
+            grid-column: 5/7;
+            grid-row: 2/3;
+        }
+        .child3:nth-child(6){
+            grid-column: 7/9;
+            grid-row: 2/6;
+        }
+        .child3:nth-child(7){
+            grid-column: 3/5;
+            grid-row: 3/6;
+        }
+        .child3:nth-child(8){
+            grid-column: 5/7;
+            grid-row: 3/6;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>
+        layout 1
+    </h1>
+    <div class="contener">
+        <div class="child" style="background-color: aliceblue;">number1</div>
+        <div class="child" style="background-color: antiquewhite;">number2</div>
+        <div class="child" style="background-color:aquamarine ;">number3</div>
+        <div class="child" style="background-color:aqua ">number4</div>
+        <div class="child" style="background-color: blanchedalmond;">number5</div>
+        <div class="child" style="background-color:blue ;">number6</div>
+        <div class="child" style="background-color:blueviolet ;">number7</div>
+        <div class="child" style="background-color:brown ;">number8</div>
+    </div>
+    <div>
+        <h1>layout 2</h1>
+    </div>
+    <div class="contener2">
+        <div class="child2" style="background-color: aliceblue;">number1</div>
+        <div class="child2" style="background-color: antiquewhite;">number2</div>
+        <div class="child2" style="background-color:aquamarine ;">number3</div>
+        <div class="child2" style="background-color:aqua ">number4</div>
+        <div class="child2" style="background-color: blanchedalmond;">number5</div>
+        <div class="child2" style="background-color:blue ;">number6</div>
+    </div>
+    <h1>layout3</h1>
+    <div class="contener3">
+        <div class="child3" style="background-color: aliceblue;">number1</div>
+        <div class="child3" style="background-color: antiquewhite;">number2</div>
+        <div class="child3" style="background-color:aquamarine ;">number3</div>
+        <div class="child3" style="background-color:aqua ">number4</div>
+        <div class="child3" style="background-color: blanchedalmond;">number5</div>
+        <div class="child3" style="background-color:blue ;">number6</div>
+        <div class="child3" style="background-color:blueviolet ;">number7</div>
+        <div class="child3" style="background-color:brown ;">number8</div>
+    </div>
+
+</body>
+</html>

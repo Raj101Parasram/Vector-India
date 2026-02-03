@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // task on arrays
+        // task 1
+        let movies =["3 idiots","titanic","inception","interstellar","the dark knight"]
+        console.log(movies)
+        document.body.innerHTML += "Movies List:<br>"+movies
+        for(i=0;i<movies.length;i++){
+            console.log(i +"-> " +movies[i])
+            document.body.innerHTML += "<br>"+i+"-> "+movies[i]
+        }
+
+        for(i of movies){
+            console.log(i)
+            document.body.innerHTML += "<br>" + i
+        }
+
+        for(i in movies){
+            console.log(i +"=>> " +movies[i])
+            document.body.innerHTML += "<br>" + i + "=>> " + movies[i]
+        }
+
+        // task 2
+        let n=[12,3,5,6,22,56,29]
+        let evensum=0
+        let oddsum=0
+        for(i of n){
+            if(i%2==0){
+                evensum+=i
+            }else{
+                oddsum+=i
+            }
+        }
+        console.log("eevensum is : " +evensum)
+        console.log("oddsum is : " +oddsum)
+        document.body.innerHTML += "<br>Evensum is : " + evensum
+        document.body.innerHTML += "<br>Oddsum is : " + oddsum
+
+        // task 3
+        let arr = ["apple", "banana", "mango", "banana", 3, 4, 5, 6, true, {name: "object"}];
+        let str = [];
+        let num = [];
+        let bool = [];
+        let obj = [];
+        for (i of arr){
+            if(typeof i == "string"){
+                str.push(i);
+            }else if(typeof i == "number"){
+                num.push(i);
+            }else if(typeof i == "boolean"){
+                bool.push(i);
+            }else if (typeof i == "object"){
+                obj.push(i);
+            }
+        }
+        console.log("Strings: " + str);
+        console.log("Numbers: " + num);     
+        console.log("Booleans: " + bool);
+        console.log("Objects: " + JSON.stringify(obj));
+
+        // task 4
+        let a=[1,2,3,4,5]
+        a.splice(0,1)
+        a.splice(-1,1)
+        console.log(a)
+        a.push(6,7)
+        console.log(a)
+        a.shift()
+        console.log(a)
+        a.pop()
+        console.log(a)
+
+        // task 5
+
+        let r=[1,2,3,4,5,6,7,8,9,10]
+        let rr=[]
+        for(i=r.length-1;i>=0;i--){
+            rr.push(r[i])
+        }
+        console.log(rr)
+        document.body.innerHTML += "<br>Reversed Array: " + rr
+    </script>
+
+    
+</body>
+</html>

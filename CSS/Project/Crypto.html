@@ -1,0 +1,3352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+         }
+        html,body{
+            overflow-x:hidden;
+            scroll-behavior: smooth;
+        }
+        /* head */
+
+        .hed{
+            display: flex;
+            justify-content: space-between;
+            background-color:rgb(54, 54, 54);
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 90px;
+            color: whitesmoke;
+            padding-left: 10%;
+            text-align: center;
+            z-index: 11;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        .hed2{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 30px;
+            font-size: 20px;
+            margin-right: 50px;
+            text-align:justify;
+            padding-right: 20%;
+
+        }
+        a{
+            color: whitesmoke;
+            text-decoration: none;
+        }
+
+        /* peg1 */
+
+        .peg1{
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./img/project\ criypto\ img.jpg);
+            background-size: cover;
+            position: fixed;
+            z-index: -1;
+        }
+        .pegg1{
+            width: 100%; 
+        }
+        .top{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            ". . a"
+            ". . b"
+            ". . c"
+            ". . d"
+            ". . e"
+            ". . f"
+            ". . g"
+            ". . h"
+            ;
+            padding-top: 22vh;
+            padding-right: 30vh;
+            gap: 15px;
+        }
+        .child{
+            z-index: 2;
+            color: whitesmoke;
+            width: 100%;
+        }
+        .child:nth-child(1){
+            grid-area: a;
+        }
+        .child:nth-child(2){
+            grid-area: b;
+        }
+        .child:nth-child(3){
+            grid-area: c;
+        }
+        .child:nth-child(4){
+            grid-area: d;
+        }
+        .child:nth-child(5){
+            grid-area: e;
+        }
+        .child:nth-child(6){
+            grid-area: f;
+        }
+        .child:nth-child(7){
+            grid-area: g;
+        }
+        .child:nth-child(8){
+            grid-area: h;
+        }        
+        #chi2{
+            font-size: 70px;
+            font-style:normal;
+        }
+        #chi1{
+            font-size: 25px;
+            font-style:normal;
+            color:rgb(232, 179, 81);
+        }
+        #chi3, #chi4{
+            font-size: 25px;
+            font-style:normal;
+            padding-top: 10px;
+        }
+        #chi6{
+            padding-top: 50px;
+        }
+        #chi7{
+            padding-top: 20px;
+            font-size: 30px;
+        }
+        #chi8{
+            width: 100px;
+            height: 100px;
+        }
+        .time{
+            display: flex;
+            flex-direction: row;
+        }
+        .time-block{
+            display: grid;
+            position: relative;
+            padding: 0 20px;
+        }
+        .nume{
+            font-size: 3.5rem;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 10px;
+
+        }
+        .label{
+            font-size: 1rem;
+            font-weight: bold;
+            color: #dddddd;
+        }
+        .butt{
+            display: flex;
+            gap: 80px;
+        }
+        .in{
+            width: 30%;
+            height: 65px;
+            border: 2px solid rgb(91, 66, 66);
+            background: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            border-style:dotted;
+        }
+        .inco{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 50px;
+            font-size: 40px;
+            margin-right: 50px;
+            text-align:justify;
+            padding-top: 20%;
+        }
+
+        /* peg2 */
+
+        .peg2{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 100%;
+            height: 150vh;
+            background-color: #333;
+            gap: 50px;
+            padding: 12%;
+            z-index: 1;
+        }
+        .peg2card{
+            padding-top: 25%;
+            color: whitesmoke;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            border: 2px solid rgb(55, 54, 54);
+            border-radius: 5%;
+            text-align: center;
+            background-color: #1c1b1b;
+            z-index: 1;
+        }
+        .num, .mumm{
+            padding-left:60px;
+            padding-right:60px;
+            padding-top:20px;
+        }
+        .numm, .mum{
+            text-align: left;
+            padding-left: 50px;
+            padding-right: 40px;
+            padding-top: 20px;
+        }
+
+        /* peg3 */
+
+        .peg3{
+            display: flex;
+            justify-content: space-between;
+            z-index: 1;
+            padding-top: 10%;
+            padding-right: 6%;
+            color: whitesmoke;
+            background-color: #1c1b1b;
+            width: 100%;
+        }
+        .impe3{
+            height: 83%;
+        }
+        .pe3c{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-right: 100px;
+            font-size: 17px;
+            color: rgb(187, 187, 187);
+        }
+        
+        
+        /** page:"3" persentage items **/
+        
+        .persent{
+            width: 100%;
+        }
+        .progress-item {
+            margin-bottom: 38px;
+        }
+        .text-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px; 
+            font-weight: bold;   
+            font-size: 1.3rem;
+            color: whitesmoke;
+        }
+        .bar-track {
+            background-color: #333;
+            height: 6px;
+            border-radius: 3px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .bar-fill {
+            background-color: #ffb700; 
+            height: 100%;
+            border-radius: 3px;
+        }
+        
+        /* peg 4 */
+        
+        .peg4{
+            display: flex;
+            justify-content: space-between;
+            z-index: 1;
+            color: white;
+            background-color: #1c1b1b;
+            width: 100%;
+            padding-top: 7%;
+            line-height: 25px;
+            height: 150vh;
+
+        }
+        .impe4{
+            height: 75%;
+            padding-left: 7%;
+            padding-top: 8%;
+        }
+        .mpe4{
+            width: 55%;
+            height: 80%;
+        }
+        .data4{
+            display: flex;
+            flex-direction: column;
+            font-size: 1.08rem;
+            width: 95%;
+            padding-left: 30% ;
+            padding-top: 2%;
+        }
+        h3{
+            padding-bottom: 5px;
+        }
+        .roadmap{
+            padding-left: 20%;
+        }
+
+      /*  peg 5 */
+
+      .peg5{
+        height: 185vh;
+        background-color: #333;
+        padding-top: 5%;
+        text-align: center;
+        color: #dddddd;
+        font-size: 1.13rem;
+      }
+      .ceo{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        padding: 60px 130px 50px 180px;
+        row-gap: 10%;
+      }
+      .staff{
+        display: grid;
+        text-align: left;
+        width: 60%;
+        row-gap: 3%;
+      }
+      .icon{
+        color: #afaeae;
+      }
+
+      /* peg 6 */
+
+      .peg6{
+        text-align: center;
+        height: 90vh;
+        background-color: #333;
+        color: white;
+        font-size: 1.2rem;
+      }
+      .staf{
+        display: flex;
+        justify-content: space-between;
+        padding: 70px 150px 0px 150px;
+        width: 100%;
+      }
+      .staimg{
+        width: 95%;
+        height: 100%;
+        text-align: center;
+      }
+      .sta{
+        display: grid;
+        text-align: left;
+        width:25%;
+        row-gap: 3%;
+      }
+
+      /*  peg 7  */
+
+      .peg7{
+        height: 90vh;
+        background-color: #1c1b1b;
+    }
+    .pege7{
+        margin: 0px 10% 0px 10%;
+
+    }
+    .pe7{
+        display: flex;
+        gap: 20px;
+        padding: 8% 10% 2% 1%;
+        color: white;
+        font-size: 1.5rem;
+      }
+      .img7para{
+        display: flex;
+        justify-content: space-between;
+        padding: 3% 0% 2% 0%;
+        gap: 150px;
+        font-size: 1.1rem;
+        color:#c5c4c4;
+      }
+
+      /*  peg 8  */
+
+      .peg8{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-top: 5%;
+        gap: 40px;
+    }
+    .pegg8{
+        text-align: center;
+        color: #e8e7e7;
+        height: 130vh;
+        background-color:#333;
+        padding: 7% 10% 10% 12%;
+        font-size: 1.3rem;
+      }
+      .pg8{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding-bottom: 8%;
+        text-size-adjust: 10px;
+        color: #e8e7e7;
+        font-size: 0.9rem;
+        text-align: left;
+      }
+      .para8{
+        padding-top: 3%;
+        padding-bottom: 8%;
+        font-size: 1.14rem;
+        color: #afaeae;
+      }
+      .tagsale{
+        display: flex;
+        gap: 20px;
+        color:#dddddd;
+        padding-top: 5%;
+        font-size: 0.8rem;
+      }
+
+
+         /*   peg 9  */
+
+        .subscribe-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('./img/computerr.png');
+            background-size: cover;
+            background-position: center;
+            height: 160vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 110px 20px 0px 20px;
+        }
+        .subscribe-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .subscribe-section p.subtext {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-bottom: 40px;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+        .form-box {
+            display: flex;
+            justify-content: center;
+            gap: 15px; 
+            width: 100%;
+            max-width: 700px;
+            margin-bottom: 40px;
+            flex-wrap: wrap; 
+        }
+        .email-input {
+            flex: 1; 
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1rem;
+            outline: none;
+            min-width: 250px;
+        }
+        .btn-subscribe {
+            background-color: #ffc845; 
+            color: #333;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+        .btn-subscribe:hover {
+            background-color: #e0b03d;
+        }
+        .follow-text {
+            font-weight: 700;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 0px;
+        }
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border: 2px solid rgba(255, 255, 255, 0.3); 
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        .social-link:hover {
+            background-color: #ffc845;
+            color: #333; 
+        }
+
+        /*  peg 9/10  */
+
+        .peg10{
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: left;
+            margin: 150px;
+            text-align: left;
+        }
+        .token-card {
+            display: flex;
+            background-color: #2b2b2b;
+            width: 50%;
+            max-width: 100%;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            height: 550px;
+        }
+        .left-panel {
+            flex: 1;
+            padding-right: 40px; 
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .logo-icon {
+            color: #ffc107; 
+            margin-right: 10px;
+            font-size: 1.8rem;
+        }
+        .info-item {
+            margin-bottom: 25px;
+        }
+        .info-label {
+            display: block;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+        .info-value {
+            font-size: 0.95rem;
+            color: #aaaaaa; 
+        }
+        /*right side peg 10*/
+        .right-panel {
+            flex: 1; 
+            padding-left: 0px;
+        }
+        .section-title {
+            color: #ffc107; 
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            width: 60%;
+        }
+        .timer-label {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            width: 80%;
+            color: #eee;
+        }
+
+        .time-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 0;
+            width: 19%;
+            position: relative;
+            padding-bottom: 10%;
+        }
+        .time-block:first-child { padding-left: 0; }
+        
+        .label {
+            font-size: 0.8rem;
+            color: #ccc;
+            font-weight: 500;
+            width: 80%;
+        }
+        .time-block:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 10%;
+            height: 80%;
+            background-color: #555;
+        }
+        .btn-buy {
+            background-color: #ffc107;
+            color: #000;
+            border: none;
+            padding: 15px 40px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+        .btn-buy:hover {
+            background-color: #e0a800;
+        }
+        .token-price {
+            display: block;
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #444; 
+            width: 60%;
+        }
+        .payment-title {
+            font-size: 0.8rem;
+            color: #ffc107;
+            font-weight: 700;
+            width: 60%;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .payment-icons {
+            display: flex;
+            gap: 20px;
+            font-size: 1.5rem;
+            width: 60%;
+            color: #fff;
+        }
+
+        /* peg 11  */
+
+        .peg11{
+            background-color: #1c1b1b; 
+            color: #b0b0b0;            
+            padding-top: 70px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .peg11cont{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: space-between; 
+            max-width: 1200px;
+            margin: 0 auto; 
+            padding: 0 20px 50px 20px;
+            gap: 40px;
+        }
+        .pe11col{
+            flex: 1;
+        }
+        .h3pg11{
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            margin-top: 0;
+        }
+        .footer-text {
+            margin-bottom: 25px;
+        }
+        .peg11icons a {
+            color: #b0b0b0;
+            margin-right: 20px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .peg11icons a:hover{
+            color: #ffffff;
+        }
+        .news-item {
+            margin-bottom: 20px;
+        }
+        .news-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #ffffff; 
+            display: block;
+            margin-bottom: 5px;
+        } 
+        .news-title {
+            color: #b0b0b0;
+            text-decoration: none;
+            display: block;
+            transition: color 0.3s;
+        }
+        .news-title:hover {
+            color: #ffffff;
+        }
+        .separator {
+            border-bottom: 1px solid #333;
+            margin: 20px 0;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-list li {
+            display: flex;
+            align-items: flex-start; 
+            margin-bottom: 15px;
+        }
+        .contact-list i {
+            margin-right: 15px;
+            margin-top: 5px; 
+            font-size: 1rem;
+            width: 20px;    
+            text-align: center;
+        }
+        .footer-bottom {
+            background-color: #252525;
+            text-align: center;
+            padding: 35px 0;
+            font-size: 0.85rem;
+            color: #888;
+            font-size: 1.15rem;
+            height: 100px;
+        }
+        .footer-bottom strong {
+            color: #fff;
+        }
+
+        /* risponsiv under 1150px */
+
+
+        @media screen and (width<1150px)
+{
+    /*  head   */
+        .hed{
+            display: flex;
+            justify-content: space-between;
+            background-color:rgb(54, 54, 54);
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            color: whitesmoke;
+            padding-left: 12%;
+            text-align: center;
+            z-index: 11;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .hed2{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 22px;
+            font-size: 1rem;
+            margin-right: 15px;
+            text-align:justify;
+            padding-right: 20%;
+
+        }
+
+    /*  peg1  */
+
+
+        .top{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            ". . a"
+            ". . b"
+            ". . c"
+            ". . d"
+            ". . e"
+            ". . f"
+            ". . g"
+            ". . h"
+            ;
+            padding-top: 20vh;
+            padding-right: 15vh;
+            gap: 8px;
+        }
+        .child{
+            color: whitesmoke;
+            z-index: 2;
+            width: 90%;
+        }
+        .child:nth-child(1){
+            grid-area: a;
+        }
+        .child:nth-child(2){
+            grid-area: b;
+        }
+        .child:nth-child(3){
+            grid-area: c;
+        }
+        .child:nth-child(4){
+            grid-area: d;
+        }
+        .child:nth-child(5){
+            grid-area: e;
+        }
+        .child:nth-child(6){
+            grid-area: f;
+        }
+        .child:nth-child(7){
+            grid-area: g;
+        }
+        .child:nth-child(8){
+            grid-area: h;
+        }        
+        #chi2{
+            font-size: 50px;
+            font-style:normal;
+        }
+        #chi1{
+            font-size: 25px;
+            font-style:normal;
+            color:rgb(232, 179, 81);
+        }
+        #chi3, #chi4{
+            font-size: 25px;
+            font-style:normal;
+            padding-top: 10px;
+        }
+        #chi6{
+            padding-top: 30px;
+        }
+        #chi7{
+            padding-top: 20px;
+            font-size: 22px;
+        }
+        #chi8{
+            width: 70px;
+            height: 100px;
+        }
+        .time{
+            display: flex;
+            flex-direction: row;
+        }
+        .time-block{
+            display: grid;
+            position: relative;
+            padding: 0 5px;
+        }
+        .nume{
+            font-size: 2.3rem;
+            font-weight: 550;
+            line-height: 0.6;
+
+        }
+        .label{
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #dddddd;
+        }
+        .butt{
+            display: flex;
+            gap: 60px;
+        }
+        .in{
+            width: 100%;
+            height: 65px;
+            border: 2px solid rgb(91, 66, 66);
+            background: none;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            border-style:dotted;
+        }
+        .inco{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 50px;
+            font-size: 40px;
+            margin-right: 50px;
+            text-align:justify;
+            padding-top: 20%;
+        }
+
+        /* peg3 */
+
+        .peg3{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            z-index: 1;
+            padding-top: 10%;
+            color: whitesmoke;
+            background-color: #1c1b1b;
+            width: 100%;
+        }
+        .impe3{
+            height: 65%;
+        }
+        .pe3c{
+            display: grid;
+            gap: 10px;
+            font-size: 17px;
+            color: rgb(187, 187, 187);
+            width: 95%;
+            height: 80%;
+        }
+        
+        
+        /** page:"3" persentage items **/
+        
+        .persent{
+            width: 100%;
+        }
+        .progress-item {
+            margin-bottom: 38px;
+        }
+        .text-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px; 
+            font-weight: bold;   
+            font-size: 0.9rem;
+            color: whitesmoke;
+        }
+        .bar-track {
+            background-color: #333;
+            height: 6px;
+            border-radius: 3px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .bar-fill {
+            background-color: #ffb700; 
+            height: 100%;
+            border-radius: 3px;
+        }
+        
+        /* peg 4  */
+
+        .peg4{
+            display: flex;
+            z-index: 1;
+            color: whitesmoke;
+            background-color: #1c1b1b;
+            width: 100%;
+            padding-top: 7%;
+            line-height: 17px;
+            height: 170vh;
+            text-align: center;
+        }
+        .impe4{
+            height: 40%;
+            padding-left: 8%;
+            margin-top: 20%;
+        }
+        .mpe4{
+            width: 60%;
+            height: 100%;
+        }
+        .data4{
+            display: grid;
+            grid-template-columns: 1fr;
+            font-size: 1rem;
+            width: 80%;
+            padding-left: 30% ;
+            padding-top: 5%;
+            text-align: left;
+        }
+        h3{
+            padding-bottom: 9px;
+        }
+        .roadmap{
+            padding-left: 22%;
+            text-align: left;
+        }
+
+        /* peg 5  */
+
+      .peg5{
+        height: 340vh;
+        background-color: #333;
+        padding-top: 7%;
+        text-align: center;
+        color: #dddddd;
+        font-size: 1.13rem;
+      }
+      .ceo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 70px 50px 50px 150px;
+        row-gap: 10%;
+      }
+      .staff{
+        display: grid;
+        text-align: left;
+        width: 40%;
+        row-gap: 3%;
+      }
+      .icon{
+        color: #afaeae;
+      }
+
+      /* peg 6 */
+
+      .peg6{
+        text-align: center;
+        height: 90vh;
+        background-color: #333;
+        color: white;
+        font-size: 1.1rem;
+      }
+      .staf{
+        display: flex;
+        justify-content: space-between;
+        padding: 70px 100px 0px 100px;
+        width: 100%;
+      }
+      .staimg{
+        width: 95%;
+        height: 100%;
+        text-align: center;
+      }
+      .sta{
+        display: grid;
+        text-align: left;
+        width:20%;
+        row-gap: 3%;
+      }
+
+      /*  peg 7  */
+
+    .peg7{
+        height: 100vh;
+        background-color: #1c1b1b;
+    }
+    .pege7{
+        margin: 0px 10% 0px 10%;
+        height: 10%;
+
+    }
+    .pe7{
+        display: flex;
+        gap: 10px;
+        padding: 8% 10% 2% 1%;
+        color: white;
+        font-size: 1.5rem;
+      }
+      .img7para{
+        display: flex;
+        justify-content: space-between;
+        padding: 3% 0% 2% 0%;
+        gap: 150px;
+        font-size: 1.1rem;
+        color:#c5c4c4;
+      }
+
+      /*  peg 8  */
+
+      .peg8{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-top: 5%;
+        gap: 40px;
+    }
+    .pegg8{
+        text-align: center;
+        color: #e8e7e7;
+        height: 190vh;
+        background-color:#333;
+        padding: 7% 10% 10% 12%;
+        font-size: 1.3rem;
+      }
+    /*  .pg8{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding-bottom: 8%;
+        text-size-adjust: 10px;
+        color: #e8e7e7;
+        font-size: 0.9rem;
+        text-align: left;
+      }
+      .para8{
+        padding-top: 3%;
+        padding-bottom: 8%;
+        font-size: 1.14rem;
+        color: #afaeae;
+      }
+      .tagsale{
+        display: flex;
+        gap: 20px;
+        color:#dddddd;
+        padding-top: 5%;
+        font-size: 0.8rem;
+      }  */
+
+
+          /* peg 10  */
+
+        .subscribe-section {
+            height: 190vh;
+        }
+
+        /*right side peg 10*/
+
+        .time-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 0;
+            width: 19%;
+            position: relative;
+            padding-bottom: 10%;
+        }
+        .label {
+            font-size: 0.6rem;
+            color: #ccc;
+            font-weight: 500;
+            width: 80%;
+        }
+
+}
+
+        /* risponsiv under 960px */
+
+        @media screen and (width>726px) and (width<960px) 
+{
+    /* head */
+
+        .hed{
+            display: flex;
+            justify-content: space-between;
+            background-color:rgb(54, 54, 54);
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            color: whitesmoke;
+            padding-left: 12%;
+            text-align: center;
+            z-index: 11;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .hed2{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 12px;
+            font-size: 0.9rem;
+            margin-right: 0px;
+            text-align:justify;
+            padding-right: 20%;
+
+        }
+
+    /*  peg1  */
+
+        .top{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            ". . a"
+            ". . b"
+            ". . c"
+            ". . d"
+            ". . e"
+            ". . f"
+            ". . g"
+            ". . h"
+            ;
+            padding-top: 22vh;
+            padding-right: 4vh;
+            gap: 6px;
+        }
+        .child{
+            color: whitesmoke;
+            z-index: 2;
+            width: 85%;
+        }
+        .child:nth-child(1){
+            grid-area: a;
+        }
+        .child:nth-child(2){
+            grid-area: b;
+        }
+        .child:nth-child(3){
+            grid-area: c;
+        }
+        .child:nth-child(4){
+            grid-area: d;
+        }
+        .child:nth-child(5){
+            grid-area: e;
+        }
+        .child:nth-child(6){
+            grid-area: f;
+        }
+        .child:nth-child(7){
+            grid-area: g;
+        }
+        .child:nth-child(8){
+            grid-area: h;
+        }        
+        #chi2{
+            font-size: 40px;
+            font-style:normal;
+        }
+        #chi1{
+            font-size: 22px;
+            font-style:normal;
+            color:rgb(232, 179, 81);
+        }
+        #chi3, #chi4{
+            font-size: 22px;
+            font-style:normal;
+            padding-top: 10px;
+        }
+        #chi6{
+            padding-top: 30px;
+        }
+        #chi7{
+            padding-top: 30px;
+            font-size: 20px;
+        }
+        #chi8{
+            width: 60px;
+            height: 100px;
+        }
+        .time{
+            display: flex;
+            flex-direction: row;
+        }
+        .time-block{
+            display: grid;
+            position: relative;
+            padding: 0 5px;
+        }
+        .nume{
+            font-size: 2rem;
+            font-weight: 550;
+            line-height: 0.9;
+
+        }
+        .label{
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #dddddd;
+        }
+        .butt{
+            display: flex;
+            gap: 40px;
+        }
+        .in{
+            width: 100%;
+            height: 65px;
+            border: 2px solid rgb(91, 66, 66);
+            background: none;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            border-style:dotted;
+        }
+        .inco{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 40px;
+            font-size: 35px;
+            margin-right: 50px;
+            text-align:justify;
+            padding-top: 20%;
+        }
+
+        /*   peg2  */
+
+        .peg2{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            height: 180vh;
+            background-color: #333;
+            gap: 30px;
+            padding: 10%;
+            z-index: 1;
+        }
+        .peg2card{
+            padding-top: 12%;
+            color: whitesmoke;
+            width: 95%;
+            height: 100%;
+            border: 2px solid rgb(55, 54, 54);
+            border-radius: 10%;
+            text-align: center;
+            background-color: #1c1b1b;
+            z-index: 1;
+        }
+        .num, .mumm{
+            padding-left:60px;
+            padding-right:60px;
+            padding-top:20px;
+        }
+        .numm, .mum{
+            text-align: left;
+            padding-left: 50px;
+            padding-right: 40px;
+            padding-top: 20px;
+        }
+
+        /* peg3 */
+
+        .peg3{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            z-index: 1;
+            padding-top: 10%;
+            color: whitesmoke;
+            background-color: #1c1b1b;
+            width: 100%;
+            height: 100vh;
+        }
+        .impe3{
+            height: 50%;
+        }
+        .pe3c{
+            display: grid;
+            font-size: 12px;
+            color: rgb(187, 187, 187);
+            width: 95%;
+            height: 70%;
+        }
+        
+        
+        /** page:"3" persentage items **/
+        
+
+        .text-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0px; 
+            font-weight: bold;   
+            font-size: 0.9rem;
+            color: whitesmoke;
+        }
+        .bar-track {
+            background-color: #333;
+            height: 6px;
+            border-radius: 3px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .bar-fill {
+            background-color: #ffb700; 
+            height: 100%;
+            border-radius: 3px;
+        }
+        
+        /* peg 4  */
+
+        .peg4{
+            display: flex;
+            z-index: 1;
+            color: whitesmoke;
+            background-color: #1c1b1b;
+            width: 100%;
+            padding-top: 7%;
+            line-height: 17px;
+            height: 165vh;
+            text-align: center;
+        }
+        .impe4{
+            height: 35%;
+            padding-left: 8%;
+            margin-top: 20%;
+        }
+        .mpe4{
+            width: 60%;
+            height: 100%;
+        }
+        .data4{
+            display: grid;
+            grid-template-columns: 1fr;
+            font-size: 1rem;
+            width: 100%;
+            padding-left: 20% ;
+            padding-top: 5%;
+            text-align: left;
+        }
+        h3{
+            padding-bottom: 9px;
+        }
+        .roadmap{
+            padding-left: 12%;
+            text-align: left;
+        }
+
+        /* peg 5  */
+
+      .peg5{
+        height: 340vh;
+        background-color: #333;
+        padding-top: 7%;
+        text-align: center;
+        color: #dddddd;
+        font-size: 1.13rem;
+      }
+      .ceo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 70px 0px 50px 5px;
+        row-gap: 10%;
+      }
+      .staff{
+        display: grid;
+        text-align: left;
+        width: 40%;
+        row-gap: 3%;
+      }
+      .icon{
+        color: #afaeae;
+      }
+
+      /* peg 6 */
+
+      .peg6{
+        text-align: center;
+        height: 90vh;
+        background-color: #333;
+        color: white;
+        font-size: 0.95rem;
+      }
+      .staf{
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 50px 0px 50px;
+        width: 100%;
+      }
+      .staimg{
+        width: 95%;
+        height: 100%;
+        text-align: center;
+      }
+      .sta{
+        display: grid;
+        text-align: left;
+        width:20%;
+        row-gap: 3%;
+      }
+
+      /*  peg 7  */
+
+    .peg7{
+        height: 150vh;
+        background-color: #1c1b1b;
+    }
+    .pege7{
+        margin: 0px 10% 0px 10%;
+        width: 80%;
+
+    }
+    .pe7{
+        display: flex;
+        gap: 10px;
+        padding: 8% 10% 2% 1%;
+        color: white;
+        font-size: 1.5rem;
+      }
+      .img7para{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3% 0% 2% 0%;
+        gap: 50px;
+        font-size: 1.1rem;
+        color:#c5c4c4;
+      }
+
+      /*  peg 8  */
+
+      .peg8{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 5%;
+        gap: 40px;
+    }
+    .pegg8{
+        text-align: center;
+        color: #e8e7e7;
+        height: 220vh;
+        background-color:#333;
+        padding: 7% 10% 10% 12%;
+        font-size: 1.3rem;
+      }
+    /*  .pg8{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding-bottom: 8%;
+        text-size-adjust: 10px;
+        color: #e8e7e7;
+        font-size: 0.9rem;
+        text-align: left;
+      }
+      .para8{
+        padding-top: 3%;
+        padding-bottom: 8%;
+        font-size: 1.14rem;
+        color: #afaeae;
+      }
+      .tagsale{
+        display: flex;
+        gap: 20px;
+        color:#dddddd;
+        padding-top: 5%;
+        font-size: 0.8rem;
+      }  */
+
+          /* peg 10  */
+
+        .subscribe-section {
+            height: 190vh;
+        }
+
+        /*right side peg 10*/
+
+        .time-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 0;
+            width: 22%;
+            position: relative;
+            padding-bottom: 10%;
+        }
+        
+        .label {
+            font-size: 0.6rem;
+            color: #ccc;
+            font-weight: 500;
+            width: 80%;
+        }
+
+}
+
+
+        /* risponsiv under 700px */
+
+        @media screen and (width>500px) and (width<726px) 
+{
+        .hed{
+            display: flex;
+            justify-content: space-between;
+            background-color:rgb(54, 54, 54);
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            color: whitesmoke;
+            padding-left: 8%;
+            text-align: center;
+            z-index: 11;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .hed2{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 10px;
+            font-size: 0.85rem;
+            margin-left: 10%;
+            text-align:justify;
+            padding-right: 10%;
+
+        }
+    /*  peg1  */
+
+
+        .top{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            ". . a"
+            ". . b"
+            ". . c"
+            ". . d"
+            ". . e"
+            ". . f"
+            ". . g"
+            ". . h"
+            ;
+            padding-top: 22vh;
+            padding-right: 0vh;
+            gap: 8px;
+        }
+        .child{
+            color: whitesmoke;
+            z-index: 2;
+            width: 85%;
+        }
+        .child:nth-child(1){
+            grid-area: a;
+        }
+        .child:nth-child(2){
+            grid-area: b;
+        }
+        .child:nth-child(3){
+            grid-area: c;
+        }
+        .child:nth-child(4){
+            grid-area: d;
+        }
+        .child:nth-child(5){
+            grid-area: e;
+        }
+        .child:nth-child(6){
+            grid-area: f;
+        }
+        .child:nth-child(7){
+            grid-area: g;
+        }
+        .child:nth-child(8){
+            grid-area: h;
+        }        
+        #chi2{
+            font-size: 30px;
+            font-style:normal;
+        }
+        #chi1{
+            font-size: 18px;
+            font-style:normal;
+            color:rgb(232, 179, 81);
+        }
+        #chi3, #chi4{
+            font-size: 18px;
+            font-style:normal;
+            padding-top: 11px;
+        }
+        #chi6{
+            padding-top: 20px;
+        }
+        #chi7{
+            padding-top: 15px;
+            font-size: 18px;
+        }
+        #chi8{
+            width: 60px;
+            height: 80px;
+        }
+        .time{
+            display: flex;
+            flex-direction: row;
+        }
+        .time-block{
+            display: grid;
+            position: relative;
+            padding: 0 4px;
+        }
+        .nume{
+            font-size: 1.8rem;
+            font-weight: 550;
+            line-height: 0.9;
+        }
+        .label{
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #dddddd;
+        }
+        .butt{
+            display: flex;
+            gap: 30px;
+        }
+        .in{
+            width: 100%;
+            height: 55px;
+            border: 2px solid rgb(91, 66, 66);
+            background: none;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            border-style:dotted;
+        }
+        .inco{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 40px;
+            font-size: 35px;
+            margin-right: 50px;
+            text-align:justify;
+            padding-top: 3%;
+        } 
+
+    /*  peg 2  */
+
+        .peg2{
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 100%;
+            height: 300vh;
+            background-color: #333;
+            gap: 30px;
+            padding: 10%;
+            z-index: 1;
+            padding-left: 30%;
+        }
+        .peg2card{
+            padding-top: 7%;
+            color: whitesmoke;
+            width: 70%;
+            height: 100%;
+            border: 2px solid rgb(55, 54, 54);
+            border-radius: 10%;
+            text-align: center;
+            background-color: #1c1b1b;
+            z-index: 1;
+        }
+        .num, .mumm{
+            padding-left:60px;
+            padding-right:60px;
+            padding-top:20px;
+        }
+        .numm, .mum{
+            text-align: left;
+            padding-left: 50px;
+            padding-right: 40px;
+            padding-top: 20px;
+        }
+
+        /* peg3 */
+
+        .peg3{
+            display: grid;
+            grid-template-columns: 1fr;
+            z-index: 1;
+            padding-top: 20%;
+            color: whitesmoke;
+            background-color: #1c1b1b;
+            width: 100%;
+            height: 225vh;
+        }
+        .impe3, .pe3{
+            height: 80%;
+        }
+        .pe3c{
+            display: grid;
+            font-size: 18px;
+            color: rgb(187, 187, 187);
+            width: 70%;
+            height: 50%;
+            padding-left: 8%;
+        }
+        
+        
+        /** page:"3" persentage items **/
+        
+
+        .text-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px; 
+            font-weight: bold;   
+            font-size: 1.1rem;
+            color: whitesmoke;
+        }
+        .bar-track {
+            background-color: #333;
+            height: 6px;
+            border-radius: 3px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .bar-fill {
+            background-color: #ffb700; 
+            height: 100%;
+            border-radius: 3px;
+        }
+
+                /* peg 4  */
+
+        .peg4{
+            display: grid;
+            grid-template-columns: 1fr;
+            z-index: 1;
+            color: whitesmoke;
+            background-color: #1c1b1b;
+            width: 100%;
+            padding-top: 3%;
+            line-height: 20px;
+            height: 275vh;
+
+        }
+        .impe4{
+            height: 65%;
+            padding-left: 0%;
+        }
+        .data4{
+            display: grid;
+            grid-template-columns: 1fr;
+            font-size: 1.1rem;
+            width: 70%;
+            padding-left: 18% ;
+            padding-top: 5%;
+        }
+        h3{
+            padding-bottom: 9px;
+        }
+        .roadmap{
+            padding-left: 12%;
+            padding-top: 10%;
+        }
+
+        /* peg 5  */
+
+      .peg5{
+        height: 620vh;
+        background-color: #333;
+        padding-top: 7%;
+        text-align: center;
+        color: #dddddd;
+        font-size: 1.13rem;
+      }
+      .ceo{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 70px 0px 50px 110px;
+        row-gap: 5%;
+      }
+      .staff{
+        display: grid;
+        text-align: left;
+        width: 40%;
+        row-gap: 3%;
+      }
+      .icon{
+        color: #afaeae;
+      }
+
+      /* peg 6 */
+
+      .peg6{
+        text-align: center;
+        height: 350vh;
+        background-color: #333;
+        color: white;
+        font-size: 1.2rem;
+      }
+      .staf{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 70px 0px 0px 250px;
+        width: 100%;
+      }
+      .staimg{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+      .sta{
+        display: grid;
+        text-align: left;
+        width:50%;
+        row-gap: 3%;
+        padding-bottom: 25%;
+      }
+
+      /*  peg 7  */
+
+    .peg7{
+        height: 150vh;
+        background-color: #1c1b1b;
+    }
+    .pege7{
+        margin: 0px 10% 0px 10%;
+        width: 80%;
+
+    }
+    .pe7{
+        display: flex;
+        gap: 10px;
+        padding: 8% 10% 2% 1%;
+        color: white;
+        font-size: 1.5rem;
+      }
+      .img7para{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3% 0% 2% 0%;
+        gap: 50px;
+        font-size: 1.1rem;
+        color:#c5c4c4;
+      }
+
+      /*  peg 8  */
+
+      .peg8{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-top: 5%;
+        gap: 40px;
+    }
+    .pegg8{
+        text-align: center;
+        color: #e8e7e7;
+        height: 350vh;
+        background-color:#333;
+        padding: 7% 10% 10% 12%;
+        font-size: 1.3rem;
+      }
+    /*  .pg8{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding-bottom: 8%;
+        text-size-adjust: 10px;
+        color: #e8e7e7;
+        font-size: 0.9rem;
+        text-align: left;
+      }
+      .para8{
+        padding-top: 3%;
+        padding-bottom: 8%;
+        font-size: 1.14rem;
+        color: #afaeae;
+      }
+      .tagsale{
+        display: flex;
+        gap: 20px;
+        color:#dddddd;
+        padding-top: 5%;
+        font-size: 0.8rem;
+      }  */
+
+
+          /* peg 10  */
+
+        .subscribe-section {
+            height: 190vh;
+        }
+
+        /*right side peg 10*/
+
+        .time-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 0;
+            width: 22%;
+            position: relative;
+            padding-bottom: 10%;
+        }
+        
+        .label {
+            font-size: 0.6rem;
+            color: #ccc;
+            font-weight: 500;
+            width: 80%;
+        }
+
+        /*  peg 11  */
+            .peg11cont{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between; 
+            max-width: 1200px;
+            margin: 0 auto; 
+            padding: 0 20px 50px 20px;
+            gap: 40px;
+        }
+
+}
+
+        /* risponsiv under 500px */
+
+        @media screen and (width>300px) and (width<500px)
+{
+        .hed{
+            display: flex;
+            justify-content: space-between;
+            background-color:rgb(54, 54, 54);
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            color: whitesmoke;
+            padding-left: 3%;
+            text-align: justify;
+            z-index: 11;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .hed2{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 7px;
+            font-size: 0.68rem;
+            margin-left: 10%;
+            text-align:justify;
+            padding-right: 10%;
+
+        }
+    /*  peg1   */
+        
+         .peg1{
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./img/project\ criypto\ img\ mobile33.jpg);
+            background-size: cover;
+            position: fixed;
+            z-index: -1;
+        }       
+        .top{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            ". . a"
+            ". . b"
+            ". . c"
+            ". . d"
+            ". . e"
+            ". . f"
+            ". . g"
+            ". . h"
+            ;
+            padding-top: 25vh;
+            padding-right: 1.5vh;
+            gap: 8px;
+        }
+        .child{
+            color: whitesmoke;
+            z-index: 2;
+            width: 85%;
+        }
+        .child:nth-child(1){
+            grid-area: a;
+        }
+        .child:nth-child(2){
+            grid-area: b;
+        }
+        .child:nth-child(3){
+            grid-area: c;
+        }
+        .child:nth-child(4){
+            grid-area: d;
+        }
+        .child:nth-child(5){
+            grid-area: e;
+        }
+        .child:nth-child(6){
+            grid-area: f;
+        }
+        .child:nth-child(7){
+            grid-area: g;
+        }
+        .child:nth-child(8){
+            grid-area: h;
+        }        
+        #chi2{
+            font-size: 30px;
+            font-style:normal;
+        }
+        #chi1{
+            font-size: 18px;
+            font-style:normal;
+            color:rgb(232, 179, 81);
+        }
+        #chi3, #chi4{
+            font-size: 18px;
+            font-style:normal;
+            padding-top: 11px;
+        }
+        #chi6{
+            padding-top: 20px;
+        }
+        #chi7{
+            padding-top: 15px;
+            font-size: 18px;
+        }
+        #chi8{
+            width: 60px;
+            height: 80px;
+        }
+        .time{
+            display: flex;
+            flex-direction: row;
+        }
+        .time-block{
+            display: grid;
+            position: relative;
+            padding: 0 4px;
+        }
+        .nume{
+            font-size: 1.8rem;
+            font-weight: 550;
+            line-height: 0.9;
+        }
+        .label{
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #dddddd;
+        }
+        .butt{
+            display: flex;
+            gap: 30px;
+        }
+        .in{
+            width: 100%;
+            height: 55px;
+            border: 2px solid rgb(91, 66, 66);
+            background: none;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            border-style:dotted;
+        }
+        .inco{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 40px;
+            font-size: 35px;
+            margin-right: 50px;
+            text-align:justify;
+            padding-top: 3%;
+        } 
+
+    /*  peg 2  */
+
+        .peg2{
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 100%;
+            height: 300vh;
+            background-color: #333;
+            gap: 30px;
+            padding: 10%;
+            z-index: 1;
+            padding: 14%;
+        }
+        .peg2card{
+            padding-top: 7%;
+            color: whitesmoke;
+            width: 100%;
+            height: 100%;
+            border: 2px solid rgb(55, 54, 54);
+            border-radius: 10%;
+            text-align: center;
+            background-color: #1c1b1b;
+            z-index: 1;
+        }
+        .num, .mumm{
+            padding-left:60px;
+            padding-right:60px;
+            padding-top:20px;
+        }
+        .numm, .mum{
+            text-align: left;
+            padding-left: 50px;
+            padding-right: 40px;
+            padding-top: 20px;
+        }
+
+        /* peg3 */
+
+        .peg3{
+            display: flex;
+            flex-direction: column;
+            white-space: 50px;
+            z-index: 1;
+            padding-top: 20%;
+            color: whitesmoke;
+            background-color: #1c1b1b;
+            width: 100%;
+            height: 205vh;
+            height: 50%;
+        }
+        .impe3{
+            width: 120%;
+            padding-bottom: 30%;
+        }
+        .pe3{
+            height: 100%;
+        }
+        .pe3c{
+            display: grid;
+            font-size: 18px;
+            color: rgb(187, 187, 187);
+            width: 100%;
+            height: 50%;
+            padding-left: 8%;
+        }
+        
+        
+        /** page:"3" persentage items **/
+        
+
+        .text-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px; 
+            font-weight: bold;   
+            font-size: 1.1rem;
+            color: whitesmoke;
+        }
+        .bar-track {
+            background-color: #333;
+            height: 6px;
+            border-radius: 3px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .bar-fill {
+            background-color: #ffb700; 
+            height: 100%;
+            border-radius: 3px;
+        }
+
+                /* peg 4  */
+
+        .peg4{
+            display: grid;
+            grid-template-columns: 1fr;
+            z-index: 1;
+            color: whitesmoke;
+            background-color: #1c1b1b;
+            width: 100%;
+            padding-top: 10%;
+            line-height: 18px;
+            height: 255vh;
+            height: 90%;
+
+        }
+        .impe4{
+            height: 45%;
+            padding-left: 0%;
+        }
+        .data4{
+            display: grid;
+            grid-template-columns: 1fr;
+            font-size: 1rem;
+            width: 66%;
+            padding-left: 16% ;
+            padding-top: 5%;
+        }
+        h3{
+            padding-bottom: 9px;
+        }
+        .roadmap{
+            padding-left: 12%;
+            padding-top: 10%;
+        }
+
+        /* peg 5  */
+
+      .peg5{
+        height: 560vh;
+        background-color: #333;
+        padding-top: 7%;
+        text-align: center;
+        color: #dddddd;
+        font-size: 1.13rem;
+      }
+      .ceo{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 70px 0px 50px 5px;
+        row-gap: 5%;
+      }
+      .staff{
+        display: grid;
+        text-align: left;
+        width: 40%;
+        row-gap: 3%;
+      }
+      .icon{
+        color: #afaeae;
+      }
+
+      /* peg 6 */
+
+      .peg6{
+        text-align: center;
+        height: 350vh;
+        background-color: #333;
+        color: white;
+        font-size: 1.1rem;
+        padding-top: 20%;
+      }
+      .staf{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 70px 5px 5px 5px;
+        width: 100%;
+      }
+      .staimg{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+      .sta{
+        display: grid;
+        text-align: left;
+        width:100%;
+        row-gap: 3%;
+        padding-bottom: 25%;
+      }
+
+      /*  peg 7  */
+
+    .peg7{
+        height: 130vh;
+        background-color: #1c1b1b;
+        padding-top: 15%;
+    }
+    .pege7{
+        margin: 0px 10% 0px 5%;
+        width: 90%;
+
+    }
+    .pe7{
+        display: flex;
+        gap: 10px;
+        padding: 8% 5% 2% 5%;
+        color: white;
+        font-size: 1.2rem;
+      }
+      .img7para{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10% 0% 2% 0%;
+        gap: 50px;
+        font-size: 1rem;
+        color:#c5c4c4;
+      }
+
+      /*  peg 8  */
+
+      .peg8{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-top: 15%;
+        gap: 40px;
+    }
+    .pegg8{
+        text-align: center;
+        color: #e8e7e7;
+        height: 380vh;
+        background-color:#333;
+        padding: 7% 10% 50px 12%;
+        font-size: 1.3rem;
+      }
+    /*  .pg8{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding-bottom: 8%;
+        text-size-adjust: 10px;
+        color: #e8e7e7;
+        font-size: 0.9rem;
+        text-align: left;
+      }
+      .para8{
+        padding-top: 3%;
+        padding-bottom: 8%;
+        font-size: 1.14rem;
+        color: #afaeae;
+      }
+      .tagsale{
+        display: flex;
+        gap: 20px;
+        color:#dddddd;
+        padding-top: 5%;
+        font-size: 0.8rem;
+      }  */
+
+         /*   peg 9  */
+
+        .subscribe-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('./img/computerr.png');
+            background-size: cover;
+            background-position: center;
+            height: 180vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 110px 20px 0px 20px;
+        }
+        .subscribe-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .subscribe-section p.subtext {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-bottom: 40px;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+        .form-box {
+            display: flex;
+            justify-content: center;
+            gap: 15px; 
+            width: 100%;
+            max-width: 700px;
+            margin-bottom: 40px;
+            flex-wrap: wrap; 
+        }
+        .email-input {
+            flex: 1; 
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1rem;
+            outline: none;
+            min-width: 250px;
+        }
+        .btn-subscribe {
+            background-color: #ffc845; 
+            color: #333;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+        .btn-subscribe:hover {
+            background-color: #e0b03d;
+        }
+        .follow-text {
+            font-weight: 700;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 0px;
+        }
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border: 2px solid rgba(255, 255, 255, 0.3); 
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        .social-link:hover {
+            background-color: #ffc845;
+            color: #333; 
+        }
+
+        /*  peg 9/10  */
+
+        .peg10{
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            margin: 100px;
+            text-align: left;
+        }
+        .token-card {
+            display: flex;
+            background-color: #2b2b2b;
+            width: 48%;
+            max-width: 80%;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            height: 420px;
+        }
+        .left-panel {
+            flex: 1;
+            padding-right: 1px; 
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            font-weight: 900;
+        }
+        .logo-icon {
+            color: #ffc107; 
+            margin-right: 0px;
+            font-size: 0.7rem;
+        }
+        .info-item {
+            margin-bottom: 5px;
+        }
+        .info-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 70;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+        .info-value {
+            font-size: 0.7rem;
+            color: #aaaaaa; 
+        }
+        /*right side peg 10*/
+        .right-panel {
+            flex: 1;
+        }
+        .section-title {
+            color: #ffc107; 
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            width: 60%;
+        }
+        .timer-label {
+            font-size: 0.7rem;
+            margin-bottom: 15px;
+            width: 100%;
+            color: #eee;
+        }
+
+        .time-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.8rem;
+            width: 18%;
+            position: relative;
+            padding-bottom: 10%;
+        }
+        .time-block:first-child { padding-left: 0; }
+        
+        .label {
+            font-size: 0.39rem;
+            color: #ccc;
+            font-weight: 700;
+            width: 100%;
+        }
+        .time-block:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 10%;
+            height: 80%;
+            background-color: #555;
+        }
+        .btn-buy {
+            background-color: #ffc107;
+            color: #000;
+            border: none;
+            padding: 5px 15px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+        .token-price {
+            display: block;
+            font-size: 0.8rem;
+            color: #ccc;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #444; 
+            width: 60%;
+        }
+        .payment-title {
+            font-size: 0.85rem;
+            color: #ffc107;
+            font-weight: 700;
+            width: 60%;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .payment-icons {
+            display: flex;
+            gap: 10px;
+            font-size: 1.1rem;
+            width: 60%;
+            color: #fff;
+        }
+
+        /* peg 11  */
+
+        .peg11{
+            background-color: #1c1b1b; 
+            color: #b0b0b0;            
+            padding-top: 70px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .peg11cont{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between; 
+            max-width: 1200px;
+            margin: 0 auto; 
+            padding: 0 20px 50px 20px;
+            gap: 40px;
+        }
+        .pe11col{
+            flex: 1;
+        }
+        .h3pg11{
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            margin-top: 0;
+        }
+        .footer-text {
+            margin-bottom: 25px;
+        }
+        .peg11icons a {
+            color: #b0b0b0;
+            margin-right: 20px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .peg11icons a:hover{
+            color: #ffffff;
+        }
+        .news-item {
+            margin-bottom: 20px;
+        }
+        .news-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #ffffff; 
+            display: block;
+            margin-bottom: 5px;
+        } 
+        .news-title {
+            color: #b0b0b0;
+            text-decoration: none;
+            display: block;
+            transition: color 0.3s;
+        }
+        .news-title:hover {
+            color: #ffffff;
+        }
+        .separator {
+            border-bottom: 1px solid #333;
+            margin: 20px 0;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-list li {
+            display: flex;
+            align-items: flex-start; 
+            margin-bottom: 15px;
+        }
+        .contact-list i {
+            margin-right: 15px;
+            margin-top: 5px; 
+            font-size: 1rem;
+            width: 20px;    
+            text-align: center;
+        }
+        .footer-bottom {
+            background-color: #252525;
+            text-align: center;
+            padding: 25px;
+            color: #888;
+            font-size: 1rem;
+            height: 80px;
+        }
+        .footer-bottom strong {
+            color: #fff;
+        }
+
+}
+
+    </style>
+</head>
+<body style="background-color:rgb(54, 54, 54);">
+
+    <!-- header -->
+    
+    <div class="headder"></div>
+    <div class="hed">
+            <p>CRYPTO</p>
+        <div class="hed2">
+            <div class="conta"><a href="#pe1">Home</a></div>
+            <div class="conta"><a href="#pe2">Service</a></div>
+            <div class="conta"><a href="#pe3">Roadmap</a></div>  
+            <div class="conta"><a href="#pe4">Experts</a></div>  
+            <div class="conta"><a href="#pe5">Blog</a></div>  
+            <div class="conta"><a href="#pe6">Contacts</a></div>  
+            <div class="conta"><i class="fa-brands fa-instagram"></i></div>  
+            <div class="conta"><i class="fa-brands fa-facebook"></i></div>  
+            <div class="conta"><i class="fa-brands fa-twitter"></i></div>  
+        </div>
+    </div>
+
+    <!-- peg 1 -->
+<div class="pe1"><div class="peg1"></div></div>
+    <div class="pegg1" id="pe1">
+        <div class="top">
+            <div class="child" style="background: none;" id="chi1" data-aos="zoom-in">ICO LANDING PAGE</div>
+            <div class="child" style="background: none;" id="chi2" data-aos="zoom-in">Your cryptocurrency project website</div>
+            <div class="child" style="background: none;" id="chi3">Description about coin and ICO event in deatale that you think your clients might find suitable</div>
+            <div class="child" style="background: none;" id="chi4">ICO Ends in:</div>
+            <div class="child" style="background: none;" id="chi5">
+                <div class="time">
+                    <div class="time-block">
+                        <span class="nume">00</span>
+                        <span class="label">Weeks</span>
+                    </div>       
+                    <div class="time-block">
+                        <span class="nume">00</span>
+                        <span class="label">Days</span>
+                    </div>        
+                    <div class="time-block">
+                        <span class="nume">00</span>
+                        <span class="label">Hours</span>
+                    </div>        
+                    <div class="time-block">
+                        <span class="nume">00</span>
+                        <span class="label">Minutes</span>
+                    </div>        
+                    <div class="time-block">
+                        <span class="nume">00</span>
+                        <span class="label">Seconds</span>
+                    </div>     
+                </div>
+            </div>
+            <div class="child" style="background: none;" id="chi6">
+                    <div class="butt" data-aos="zoom-in">
+                    <input type="button" value="BUY TOKENS" class="in">
+                    <input type="button" value="WHITEPAPER" class="in">
+                    </div>  
+            </div>
+            
+            <div class="child" style="background: none;" id="chi7" data-aos="zoom-in">Token Price: <b>0.0003 BTC</b></div>
+            <div class="child" style="background: none;" id="chi8">
+                <div class="inco" data-aos="zoom-in">
+                    <i class="fa-brands fa-cc-visa" id="chu"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-bitcoin"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- peg 2 -->
+    <div class="peg2" id="pe2">
+        <div class="peg2card">
+            <div class="car1" data-aos="flip-up">
+                <div style="color: orange;" class="numm">GET TO KNOW</div>
+                <div style="font-size: 30px;" class="mum"><b>Main Facts About Our Coin And Bussiness Model</b></div>
+            </div>
+        </div>
+        <div class="peg2card" data-aos="flip-up">
+            <div class="car1">
+                <div style="font-size:30px" class="num"><b>SMART WALLET</b></div>
+                <div style="font-size: 15px;"class="mumm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et lobortis metus. Proin vel mauris pulvinar, lacinia neque sed, posuere sem aliquet.</div>
+            </div>
+        </div>
+        <div class="peg2card" data-aos="flip-up">
+            <div class="car1">
+                <div style="font-size:30px" class="num"><b>INSTANT PAYOUTS</b></div>
+                <div style="font-size: 15px;" class="mumm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et lobortis metus. Proin vel mauris pulvinar, lacinia neque sed, posuere sem aliquet.</div>
+            </div>
+        </div>
+        <div class="peg2card" data-aos="flip-down">
+            <div class="car1">
+                <div style="font-size:30px"class="num"><b>GLOBAL</b></div>
+                <div style="font-size: 15px;" class="mumm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et lobortis metus. Proin vel mauris pulvinar, lacinia neque sed, posuere sem aliquet.</div>
+            </div>
+        </div>
+        <div class="peg2card"data-aos="flip-down">
+            <div class="car1">
+                <div style="font-size:30px" class="num"><b>NO DEPOSTS</b></div>
+                <div style="font-size: 15px;" class="mumm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et lobortis metus. Proin vel mauris pulvinar, lacinia neque sed, posuere sem aliquet.</div>
+            </div>
+        </div>
+        <div class="peg2card" data-aos="flip-down">
+            <div class="car1">
+                <div style="font-size:30px" class="num"><b>SIMPLE</b></div>
+                <div style="font-size: 15px;" class="mumm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et lobortis metus. Proin vel mauris pulvinar, lacinia neque sed, posuere sem aliquet.</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- peg 3 -->
+
+    <div class="peg3" id="pe3">
+        <div class="pe3" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="500"><img src="https://jevelin.shufflehound.com/crypto/wp-content/uploads/sites/19/2018/05/Laptop-Pro1.png" alt="" class="impe3"></div>
+        <div class="pe3c" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="500">
+            <div style="color: whitesmoke;"><h1>Token Distribution</h1></div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     Vivamus gravida lacinia tellus, vitae condimentum
+                      purus tristique sed.</p><br>
+                <p>Integer at lorem eget diam facilisis lacinia ac id massa. 
+                    Nulla facilisi. Duis ornare facilisis ex non porttitor. 
+                    Suspendisse potenti. Sed luctus suscipit tincidunt. 
+                    Ornare facilisis ex non porttitor. Suspendisse potenti. 
+                    Sed luctus suscipit tincidunt.</p>
+            </div>
+            <br><br>
+            <div class="persent">
+                <!-- item1 -->
+                <div class="progress-item">
+                    <div class="text-row">
+                        <span>Community</span>
+                        <span>77%</span>
+                    </div>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: 77%;"></div>
+                    </div>
+                </div>
+                <!-- item2 -->
+                <div class="progress-item">
+                    <div class="text-row">
+                        <span>Team and Developers</span>
+                        <span>65%</span>
+                    </div>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <!-- item3 -->
+                <div class="progress-item">
+                    <div class="text-row">
+                        <span>Token Sale and Pre-Sale</span>
+                        <span>88%</span>
+                    </div>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: 88%;"></div>
+                    </div>
+                </div>
+                <!-- item4 -->
+                <div class="progress-item">
+                    <div class="text-row">
+                        <span>Marketing</span>
+                        <span>10%</span>
+                    </div>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: 10%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <!-- peg 4 -->
+
+    <div class="peg4" >
+        <div class="page4data" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="500">
+             <div style="font-size: 1.2rem;" class="roadmap"><h1>Roadmap</h1></div><br><br>
+             <div class="data4">
+                 <div class="pe4data">
+                     <h3>Research & development</h3>
+                     <p style="color: #e8e7e7;">February, 2017</p><br>
+                     <p style="color: #c5c4c4;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                         Cras interdum sed nibh sit amet accumsan.
+                          Suspendisse posuere congue ante quis fringilla.</p>
+                 </div><br>
+                 <div class="pe4data">
+                     <h3>Project idea</h3>
+                     <p style="color: #e8e7e7;" >July, 2017</p><br>
+                     <p style="color: #c5c4c4;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                         Cras interdum sed nibh sit amet accumsan. 
+                         Suspendisse posuere congue ante quis fringilla</p>
+                 </div><br>
+                 <div class="pe4data">
+                     <h3>Commercial lounch</h3>
+                     <p style="color: #e8e7e7;">January, 2018</p><br>
+                     <p style="color: #c5c4c4;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Cras interdum sed nibh sit amet accumsan. 
+                        Suspendisse posuere congue ante quis fringilla</p>
+                 </div><br>
+                 <div class="pe4data">
+                     <h3>First clients onboarded</h3>
+                     <p style="color: #e8e7e7;">September, 2018</p><br>
+                     <p style="color: #c5c4c4;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                         Cras interdum sed nibh sit amet accumsan. 
+                        Suspendisse posuere congue ante quis fringilla.</p>
+                 </div><br>
+                 <div class="pe4data">
+                     <h3>Global market expansion</h3>
+                     <p style="color: #e8e7e7;">March, 2019</p><br>
+                     <p style="color: #c5c4c4;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Cras interdum sed nibh sit amet accumsan.
+                         Suspendisse posuere congue ante quis fringilla.</p>
+                 </div><br>
+             </div>
+        </div>
+        <div class="mpe4" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="500"><img src="./img/project video img.png" alt="" class="impe4"></div>
+    </div>
+
+    <!-- peg 5 -->
+
+    <div class="peg5" id="pe4">
+        <h5 style="color: #ffb700;">OUR AMAZING</h5>
+        <h1>Team Of Experts</h1>
+        <div class="ceo" data-aos="fade-up" data-aos-duration="4500">
+            <div class="staff" data-aos="zoom-in" data-aos-duration="500">
+                <div class="stafimg"><img src="https://jevelin.shufflehound.com/crypto/wp-content/uploads/sites/19/2018/04/Layer-926.jpg" alt=""></div>
+                <div class="name"><b>Aria Saal</b></div>
+                <div class="valu" style="color: #ffb700;">Co-founder & CEO</div>
+                <div class="para">Nam ut lectus et purus suscipit ultricies. 
+                    Nam vulputate lobortis odio ac egestas. 
+                    Cras ornare, augue sit amet varius mollis, lacus dui laoreet
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f fa-sm"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div class="staff" data-aos="zoom-in" data-aos-duration="500">
+                <div class="stafimg"><img src="https://jevelin.shufflehound.com/crypto/wp-content/uploads/sites/19/2018/04/Layer-9265.jpg" alt=""></div>
+                <div class="name"><b>Amanda Rieker</b></div>
+                <div class="valu" style="color: #ffb700;">Co-founder & CTO</div>
+                <div class="para">Nam ut lectus et purus suscipit ultricies. 
+                    Nam vulputate lobortis odio ac egestas. 
+                    Cras ornare, augue sit amet varius mollis, lacus dui laoreet
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f fa-sm"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div class="staff" data-aos="zoom-in" data-aos-duration="500">
+                <div class="stafimg"><img src="https://jevelin.shufflehound.com/crypto/wp-content/uploads/sites/19/2018/04/Layer-9266.jpg" alt=""></div>
+                <div class="name"><b>Jeremy Klark</b></div>
+                <div class="valu" style="color: #ffb700;">DEVELOPMENT LEAD</div>
+                <div class="para">Nam ut lectus et purus suscipit ultricies. 
+                    Nam vulputate lobortis odio ac egestas. 
+                    Cras ornare, augue sit amet varius mollis, lacus dui laoreet
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f fa-sm"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div class="staff" data-aos="zoom-in" data-aos-duration="500">
+                <div class="stafimg"><img src="https://jevelin.shufflehound.com/crypto/wp-content/uploads/sites/19/2018/04/Layer-9262.jpg" alt=""></div>
+                <div class="name"><b>Miranda Sinclare</b></div>
+                <div class="valu" style="color: #ffb700;">STRATEGY & MARKETING</div>
+                <div class="para">Nam ut lectus et purus suscipit ultricies. 
+                    Nam vulputate lobortis odio ac egestas. 
+                    Cras ornare, augue sit amet varius mollis, lacus dui laoreet
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f fa-sm"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div class="staff" data-aos="zoom-in" data-aos-duration="500">
+                <div class="stafimg"><img src="https://jevelin.shufflehound.com/crypto/wp-content/uploads/sites/19/2018/04/Layer-9263.jpg" alt=""></div>
+                <div class="name"><b>Brandon Wulf</b></div>
+                <div class="valu" style="color: #ffb700;">LEGAL & FINANCE</div>
+                <div class="para">Nam ut lectus et purus suscipit ultricies. 
+                    Nam vulputate lobortis odio ac egestas. 
+                    Cras ornare, augue sit amet varius mollis, lacus dui laoreet
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f fa-sm"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div class="staff" data-aos="zoom-in" data-aos-duration="500">
+                <div class="stafimg"><img src="https://jevelin.shufflehound.com/crypto/wp-content/uploads/sites/19/2018/04/Layer-9264.jpg" alt=""></div>
+                <div class="name"><b>Aaron Smith</b></div>
+                <div class="valu" style="color: #ffb700;">Front-end Developer</div>
+                <div class="para">Nam ut lectus et purus suscipit ultricies. 
+                    Nam vulputate lobortis odio ac egestas. 
+                    Cras ornare, augue sit amet varius mollis, lacus dui laoreet
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f fa-sm"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- peg 6 -->
+
+    <div class="peg6">
+        <h5 style="color: #ffb700;">OUR AMAZING</h5>
+        <h1>Team Of Experts</h1>
+        <div class="staf">
+            <div class="sta">
+                <div class="staimg" data-aos="zoom-in" data-aos-duration="700"><img class="staimg" src="https://jevelin.shufflehound.com/crypto/wp-content/uploads/sites/19/2018/04/Layer-9267.jpg" alt=""></div>
+                <div class="name"><b>Aria Saal</b></div>
+                <div class="valu" style="color: #ffb700;">Co-founder & CEO</div>
+                <div class="para">Nam ut lectus et purus suscipit ultricies. 
+                    Nam vulputate lobortis odio ac egestas. 
+                    Cras ornare, augue sit amet varius mollis, lacus dui laoreet
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f fa-sm"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div><div class="sta">
+                <div class="staimg" data-aos="zoom-in" data-aos-duration="700"><img class="staimg" src="https://jevelin.shufflehound.com/crypto/wp-content/uploads/sites/19/2018/04/Layer-9268.jpg" alt=""></div>
+                <div class="name"><b>Aria Saal</b></div>
+                <div class="valu" style="color: #ffb700;">Co-founder & CEO</div>
+                <div class="para">Nam ut lectus et purus suscipit ultricies. 
+                    Nam vulputate lobortis odio ac egestas. 
+                    Cras ornare, augue sit amet varius mollis, lacus dui laoreet
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f fa-sm"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div><div class="sta">
+                <div class="staimg" data-aos="zoom-in" data-aos-duration="700"><img class="staimg" src="https://jevelin.shufflehound.com/crypto/wp-content/uploads/sites/19/2018/04/Layer-9269.jpg" alt=""></div>
+                <div class="name"><b>Aria Saal</b></div>
+                <div class="valu" style="color: #ffb700;">Co-founder & CEO</div>
+                <div class="para">Nam ut lectus et purus suscipit ultricies. 
+                    Nam vulputate lobortis odio ac egestas. 
+                    Cras ornare, augue sit amet varius mollis, lacus dui laoreet
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f fa-sm"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div><div class="sta">
+                <div class="staimg" data-aos="zoom-in" data-aos-duration="700"><img class="staimg" src="https://jevelin.shufflehound.com/crypto/wp-content/uploads/sites/19/2018/04/Layer-92610.jpg" alt=""></div>
+                <div class="name"><b>Aria Saal</b></div>
+                <div class="valu" style="color: #ffb700;">Co-founder & CEO</div>
+                <div class="para">Nam ut lectus et purus suscipit ultricies. 
+                    Nam vulputate lobortis odio ac egestas. 
+                    Cras ornare, augue sit amet varius mollis, lacus dui laoreet
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f fa-sm"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- peg 7 -->
+     <div class="peg7">
+        <div class="pege7">
+            <div class="pe7">
+                <h1>Publications</h1>
+                <h6 style="color: #ffb700;">AND PARTNERS</h6>
+            </div><hr>
+            <div class="img7para">
+                <div data-aos="fade-right">
+                <img src="./img/pent img.png" alt="" style="height: 110%;"></div>
+                <div data-aos="fade-left">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus elit aliquam facilisis pharetra. Aenean
+                   consectetur lacinia diam a tincidunt. Vivamus facilisis lacus non velit suscipit pellentesque. Nam ac mauris nec mi
+                   lobortis sollicitudin sed at lacus. Fusce volutpat, dolor in suscipit pharetra, lacus sapien sollicitudin quam, non aliquam
+                   ex neque eu lectus.</p></div>
+            </div><hr>
+            <div class="img7para">
+                <div data-aos="fade-right">
+                <img src="./img/pent2.png" alt="" style="height: 110%;"></div>
+                <div data-aos="fade-left">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus elit aliquam facilisis pharetra. Aenean
+                   consectetur lacinia diam a tincidunt. Vivamus facilisis lacus non velit suscipit pellentesque. Nam ac mauris nec mi
+                   lobortis sollicitudin sed at lacus. Fusce volutpat, dolor in suscipit pharetra, lacus sapien sollicitudin quam, non aliquam
+                   ex neque eu lectus.</p></div>
+            </div><hr>
+        </div>
+     </div> 
+
+     <!-- peg 8 -->
+
+     <div class="pegg8" id="pe5">
+         <h6 style="color: #ffb700;" data-aos="fade-right" data-aos-duration="1500">READ OUR</h6>
+         <h1 data-aos="fade-left" data-aos-duration="1500">Market News</h1>
+    <div class="peg8">
+        <div class="pg8" data-aos="zoom-in">
+        <h1>Bitcoin, Ethereum and Ripple Trimming Gains</h1>
+        <p class="para8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque condimentum a elit in sollicitudin.
+           Donec eu ipsum luctus, aliquam augue eu, pretium dolor. In pharetra auctor dapibus.
+           Morbi diam nibh, venenatis ac arcu vitae, feugiat lobortis sapien.
+           Duis euismod orci in convallis condimentum. Suspendisse id leo…</p><hr>
+           <div class="tagsale">
+           <i class="fa-solid fa-tag fa-rotate-90 fa-xl"></i><h2>Sale</h2>
+           </div>
+        </div>
+        <div class="pg8" data-aos="zoom-in">
+        <h1>Bitcoin, Ethereum and Ripple Trimming Gains</h1>
+        <p class="para8">Curabitur hendrerit viverra orci et bibendum. Sed volutpat nisi a mi rutrum pharetra.
+             Morbi quis augue ut neque facilisis malesuada. Pellentesque eget tellus sagittis, maximus ligula ut, sodales enim.
+             Sed tortor neque, sollicitudin suscipit lacus eu, tincidunt dapibus orci.
+             Fusce euismod sem tempor bibendum finibus….</p><hr>
+           <div class="tagsale">
+           <i class="fa-solid fa-tag fa-rotate-90 fa-xl"></i><h2>Bitcoin, Sales</h2>
+           </div>
+        </div>
+        <div class="pg8" data-aos="zoom-in">
+        <h1>Bahamas Looking to Enable Blockchain-powered Undersea Exploration</h1>
+        <p class="para8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque condimentum a elit in sollicitudin.
+           Donec eu ipsum luctus, aliquam augue eu, pretium dolor. In pharetra auctor dapibus.
+           Morbi diam nibh, venenatis ac arcu vitae, feugiat lobortis sapien.
+           Duis euismod orci in convallis condimentum. Suspendisse id leo…</p><hr>
+           <div class="tagsale">
+           <i class="fa-solid fa-tag fa-rotate-90 fa-xl"></i><h2>News</h2>
+           </div>
+        </div>
+        <div class="pg8" data-aos="zoom-in">
+        <h1>What Has Been Happening with Ethereum in 2018?</h1>
+        <p class="para8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque condimentum a elit in sollicitudin.
+           Donec eu ipsum luctus, aliquam augue eu, pretium dolor. In pharetra auctor dapibus.
+           Morbi diam nibh, venenatis ac arcu vitae, feugiat lobortis sapien.
+           Duis euismod orci in convallis condimentum. Suspendisse id leo…</p><hr>
+           <div class="tagsale">
+           <i class="fa-solid fa-tag fa-rotate-90 fa-xl"></i><h2>News, Sales</h2>
+           </div>
+        </div>
+        <div class="pg8" data-aos="zoom-in">
+        <h1>MyEtherWallet DNS Hack</h1>
+        <p class="para8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque condimentum a elit in sollicitudin.
+           Donec eu ipsum luctus, aliquam augue eu, pretium dolor. In pharetra auctor dapibus.
+           Morbi diam nibh, venenatis ac arcu vitae, feugiat lobortis sapien.
+           Duis euismod orci in convallis condimentum. Suspendisse id leo…</p><hr>
+           <div class="tagsale">
+           <i class="fa-solid fa-tag fa-rotate-90 fa-xl"></i><h2>Tips & tricks</h2>
+           </div>
+        </div>
+        <div class="pg8" data-aos="zoom-in">
+        <h1> As with any other type of money, there are specific issues Bitcoin users need to know about in order to keep their funds safe.</h1>
+        <p class="para8">Robert Brarult</p><hr>
+           <div class="tagsale">
+           <i class="fa-solid fa-tag fa-rotate-90 fa-xl"></i><h2>Bitcoin, News, Sales</h2>
+           </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- peg 9 -->
+     <section class="subscribe-section" id="pe6">
+        
+        <h2 data-aos="fade-right" data-aos-duration="1500">Subscribe to always be up to<br>date in our latest news!</h2>
+        
+        <p class="subtext" data-aos="fade-left" data-aos-duration="1500">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt erat volutpat.
+        </p>
+
+        <div class="form-box" data-aos="zoom-in">
+            <input type="email" class="email-input" placeholder="Enter your email..">
+            <button class="btn-subscribe">Subscribe</button>
+        </div>
+
+        <p class="follow-text" data-aos="zoom-in">Follow us on</p>
+        
+        <div class="social-icons">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-medium-m"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+        
+        <!-- peg  9/10 -->
+        
+        <div class="peg10">
+        <div class="token-card" data-aos="fade-left" data-aos-duration="1500">
+        
+            <div class="left-panel">
+                <div class="logo-area">
+                    <i class="fas fa-circle-notch logo-icon"></i>
+                    <span>Jevelin</span>
+                </div>
+    
+                <div class="info-item">
+                    <span class="info-label">Dates:</span>
+                    <span class="info-value">Feb 1, 2018 - May 1, 2018</span>
+                </div>
+    
+                <div class="info-item">
+                    <span class="info-label">Tokens for sale:</span>
+                    <span class="info-value">3,000,000 out of 10,000,000 (30%)</span>
+                </div>
+    
+                <div class="info-item">
+                    <span class="info-label">Hard cap:</span>
+                    <span class="info-value">10 million</span>
+                </div>
+    
+                <div class="info-item">
+                    <span class="info-label">Soft cap:</span>
+                    <span class="info-value">30 million</span>
+                </div>
+    
+                <div class="info-item">
+                    <span class="info-label">Exchange rate:</span>
+                    <span class="info-value">1 ETH = 3000 JVLN</span>
+                </div>
+            </div>
+        </div>
+        <div class="token-card" data-aos="fade-right" data-aos-duration="1500" >
+
+            <div class="right-panel">
+                <div class="section-title">Participate in our Token Sale</div>
+
+                <div class="timer-label">ICO Ends in:</div>
+
+                <div class="time">
+                    <div class="time-block">
+                        <span class="numee">00</span>
+                        <span class="label">Weeks</span>
+                    </div>       
+                    <div class="time-block">
+                        <span class="numee">00</span>
+                        <span class="label">Days</span>
+                    </div>        
+                    <div class="time-block">
+                        <span class="numee">00</span>
+                        <span class="label">Hours</span>
+                    </div>        
+                    <div class="time-block">
+                        <span class="numee">00</span>
+                        <span class="label">Minutes</span>
+                    </div>        
+                    <div class="time-block">
+                        <span class="numee">00</span>
+                        <span class="label">Seconds</span>
+                    </div>     
+                </div>
+                <button class="btn-buy">Buy Tokens</button>
+                <span class="token-price">Token Price: 0.0003 BTC</span>
+
+                <div class="payment-title">Payment Methods</div>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-bitcoin"></i>
+                    <i class="fab fa-paypal"></i>
+                </div>
+            </div>
+
+        </div>
+            
+        </div>
+    </section>
+
+    <!-- peg 11 -->
+
+    <div class="peg11">
+        <div class="peg11cont">
+            <div class="pe11col">
+                <h3 class="h3pg11">JVLN Coin</h3>
+                <p class="footer-text">
+                    Duis semper mauris vitae purus rhoncus suscipit. Nunc dictum dapibus tellus, at viverra risus pharetra id. Nulla facilisi. Ut mollis et augue non gravida.
+                </p>
+                <div class="peg11icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="pe11col">
+                <h3 class="h3pg11">Latest News</h3>
+                <div class="news-item">
+                    <span class="news-category">SALES</span>
+                    <a href="#" class="news-title">Bitcoin, Ethereum and Ripple Trimming Gains</a>
+                </div>
+                <div class="separator"></div>
+                <div class="news-item">
+                    <span class="news-category">BITCOIN, SALES</span>
+                    <a href="#" class="news-title">Bitcoin and Altcoins Primed for Further Gains</a>
+                </div>
+            </div>
+            <div class="pe11col">
+                <h3 class="h3pg11">Contacts</h3>
+                <ul class="contact-list">
+                    <li>
+                        <i class="far fa-map"></i>
+                        <span>County, Street name - number</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>032 267 899 442</span>
+                    </li>
+                    <li>
+                        <i class="far fa-envelope"></i>
+                        <span>company@name.com</span>
+                    </li>
+                    <li>
+                        <i class="far fa-clock"></i>
+                        <span>Mon.-Fri.: 10-20 Sun.: 12-16</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            WordPress Theme built by <strong>Shufflehound</strong>.
+        </div>
+    </div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>   
+ 
+</body>
+</html>

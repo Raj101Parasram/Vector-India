@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *, *::after, *::before {
+	box-sizing: border-box;
+}
+
+body {
+	background: #373B44;
+	background: -webkit-linear-gradient(to top, #4286f4, #373B44);
+	background: linear-gradient(to top, #4286f4, #373B44);
+	min-height: 100vh;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Tajawal', sans-serif;
+}
+
+.slider-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 500px;
+	width: 100vw;
+	perspective: 1000px;
+	position: relative;
+    transform-style: preserve-3d;
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+.slide {
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	width: 20%;
+	height: 400px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(20% - 20px);
+	z-index: 1000;
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+}
+
+.slide .content {
+	background-color: #fff;
+	padding: 10px 10px;
+	text-align: center;
+	margin-top: 200px;
+	height: 200px;
+}
+
+.slide.slide-1 {
+	transform-origin: right;
+	transform: scale(0.95) rotateY(-20deg);
+	left: 1.5% !important;
+	z-index: 1;
+	opacity: 1;
+}
+
+.slide.slide-2 {
+	transform-origin: right;
+	transform: rotateY(-10deg);
+	left: 20% !important;
+	z-index: 2;
+	opacity: 1;
+}
+
+.slide.slide-3 {
+	left: 40% !important;
+	z-index: 2;
+	opacity: 1;
+}
+
+.slide.slide-4 {
+	transform-origin: left;
+	transform: rotateY(10deg);
+	left: 60% !important;
+	z-index: 2;
+	opacity: 1;
+}
+
+.slide.slide-5 {
+	transform-origin: left;
+	transform: scale(0.95) rotateY(20deg);
+	margin-left: 0;
+	left: 78.5% !important;
+	z-index: 1;
+	opacity: 1;
+}
+
+h2 {
+	margin: -40px 0 0;
+}
+
+img.circle {
+	object-fit: cover;
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	transform: translateY(calc(-50% - 10px));
+}
+
+.buttons-container {
+	position: absolute;
+	bottom: 0;
+}
+
+.arrow {
+	background: transparent;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	cursor: pointer;
+	color: #fff;
+	width: 50px;
+	height: 50px;
+	margin: 30px 20px 0;
+}
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+	<div class="slide slide-1" style="background-image: url('https://images.pexels.com/photos/746386/pexels-photo-746386.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+		<div class="content">
+			<img
+				 class="circle" src="https://images.pexels.com/photos/935756/pexels-photo-935756.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="person">
+			<h2>Post 1</h2>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, ad!</p>
+		</div>
+	</div>
+	<div class="slide slide-2" style="background-image: url('https://images.pexels.com/photos/416676/pexels-photo-416676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+		<div class="content">
+			<img
+				 class="circle" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="person">
+			<h2>Post 2</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+		</div>
+	</div>
+	<div class="slide slide-3" style="background-image: url('https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+		<div class="content">
+			<img
+				 class="circle" src="https://images.pexels.com/photos/937481/pexels-photo-937481.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="person">
+			<h2>Post 3</h2>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, ad!</p>
+		</div>
+	</div>
+	<div class="slide slide-4" style="background-image: url('https://images.pexels.com/photos/373934/pexels-photo-373934.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+		<div class="content">
+			<img
+				 class="circle" src="https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="person">
+			<h2>Post 4</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing!</p>
+		</div>
+	</div>
+	<div class="slide slide-5" style="background-image: url('https://images.pexels.com/photos/372098/pexels-photo-372098.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+		<div class="content">
+			<img
+				 class="circle" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="person">
+			<h2>Post 5</h2>
+			<p>Lorem ipsum dolor sit amet.</p>
+		</div>
+	</div>
+	<div class="slide slide-6" style="background-image: url('https://images.pexels.com/photos/340151/pexels-photo-340151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+		<div class="content">
+			<img
+				 class="circle" src="https://images.pexels.com/photos/428328/pexels-photo-428328.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="person">
+			<h2>Post 6</h2>
+			<p>Lorem ipsum dolor sit amet.</p>
+		</div>
+	</div>
+	<div class="buttons-container">
+		<button class="arrow left">
+			<i class="fa fa-arrow-left"></i>
+		</button>
+		<button class="arrow right">
+			<i class="fa fa-arrow-right"></i>
+		</button>
+	</div>
+</div>
+
+</body>
+</html>

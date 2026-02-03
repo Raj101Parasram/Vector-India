@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body, html{
+            padding: 0px;
+            margin: 0px;
+            overflow-x: hidden;
+        }
+        .headd{
+            border: 2px solid rgb(181, 179, 179);
+            height: 110px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            background-color: white;
+
+        }
+        .headup, .headdown{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .peg1{
+            padding: 12% 3% 0 3%;
+            display: flex;
+            height: 80vh;
+            justify-content: left;
+            justify-content: space-between;
+
+        }
+        .pegg1{
+            height: 60vh;
+            align-items: center;
+            text-align: center;
+            width: 50%;
+            border-bottom-left-radius: 10%;
+            border-top-left-radius: 10%;
+        }
+        .impeg1 img{
+            height: 60vh;
+            width: 90%;
+            border-bottom-right-radius: 10%;
+            border-top-right-radius: 10%;
+        }
+        .impeg2 img{
+            height: 60vh;
+            width: 105%;
+            border-radius: 10%;
+        }
+        .peg1left{
+            display: flex;
+        }
+
+        /* peg2 */
+
+        .peg2item{
+            display: grid;
+            height: 69vh;
+            align-items: center;
+            width: 43vh;
+            text-align: center;
+            line-height: 0px;
+            border-radius: 10%;
+            border: 1px solid rgb(227, 218, 218);
+        }
+        .peg2item img{
+            height: 55vh;
+            padding-bottom: 5%;
+            border-radius: 10%;
+            padding-left: 2%;
+            padding-top: 3%;
+
+        }
+        .peg2{
+            display: flex;
+            justify-content: space-between;
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+
+
+        /* peg 3 */
+
+        .peg3top{
+            width: 100%;
+            height: 80px;
+            background-color: rgb(31, 31, 240);
+            text-align: center;
+        }
+        .pag3{
+            height: 100vh;
+            padding-top: 10%;
+        }
+        .peg3last{
+            display: flex;
+        }
+        .peg3left{
+            text-align: center;
+            justify-content: center;
+            height: 50vh;
+            width: 35%;
+            border: 1px solid black;
+        }
+        .peg3right{
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+        .page3rig{
+            display: grid;
+            row-gap: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- headder -->
+    <div class="headd">
+        
+        <div class="headup">
+            <div style="color: rgb(216, 109, 9);"><h1>Etsy</h1></div>
+            <div><i class="fa-solid fa-list"></i>Categories</div>
+            <div><input type="text" value="Search for Anything" style="border-radius: 20%; padding-left: 5%; font-size: 1rem; color: rgb(158, 155, 152); width: 500px; height: 50px;"></div>
+            <div>Sign in</div>
+            <div><i class="fa-regular fa-heart"></i></div>
+            <div><i class="fa-solid fa-gift"></i></div>
+            <div><i class="fa-solid fa-cart-arrow-down"></i></div>
+        </div>
+        <div class="headdown">
+            <div><i class="fa-solid fa-gift"></i> Gifts</div>
+            <div>Top 100 digital Downloads</div>
+            <div>Home Favourites</div>
+            <div>Fashion Finds</div>
+            <div>Registry</div>
+        </div>
+    </div>
+
+    <!-- page1 -->
+
+    <div class="peg1">
+        <div class="peg1left">
+        <div style="background-color: rgb(33, 113, 139);" class="pegg1">
+            <p style="padding-top: 30%;">Need a gift ASAP?</p>
+            
+           <p>Find thoughtful gifts, even though it's down to the wire</p>
+            
+            <button type="button" style="background-color: rgb(245, 247, 248); height: 50px; width: 140px; border-radius: 25%;">Shop our picks</button>
+        </div>
+        <div class="impeg1"><img src="https://i.etsystatic.com/ij/69c5fc/7368880211/ij_680x540.7368880211_mz9drez1.jpg?version=0" alt=""></div>
+    </div>
+    <div class="impeg2"><img src="https://i.etsystatic.com/ij/d8ff55/7546072401/ij_600x600.7546072401_2bjozu2z.jpg?version=0" alt=""></div>
+</div>
+
+
+<!-- peg2 -->
+
+<div class="peg2h1"><h1>Jump into featured interests</h1></div>
+    <div class="peg2">
+        <div class="peg2item">
+        <img src="https://i.etsystatic.com/13455165/r/il/b0cfd7/6314641695/il_510x680.6314641695_nqaa.jpg" alt="">
+        <h3>Snowboarding Essentials</h3>
+        <p>Made for the slopes</p>
+        </div>
+        <div class="peg2item">
+        <img src="https://i.etsystatic.com/31660228/r/il/3d786f/4683710962/il_510x680.4683710962_ovcr.jpg" alt="">
+        <h3>Snowboarding Essentials</h3>
+        <p>Made for the slopes</p>
+        </div>
+        <div class="peg2item">
+        <img src="https://i.etsystatic.com/37536834/r/il/6c15a5/4583478542/il_510x680.4583478542_p9rq.jpg" alt="">
+        <h3>Snowboarding Essentials</h3>
+        <p>Made for the slopes</p>
+        </div>
+        <div class="peg2item">
+        <img src="https://i.etsystatic.com/10138478/r/il/6a2ce3/5598138313/il_510x680.5598138313_lmt6.jpg" alt="">
+        <h3>Snowboarding Essentials</h3>
+        <p>Made for the slopes</p>
+        </div>
+    </div>
+
+    <!-- pag 3 -->
+
+    <div class="peg3">
+        <div class="peg3top">
+        <h3 style="color: whitesmoke; padding-top: 40px;"><i class="fa-solid fa-earth-americas"></i>Etsy is powered by 100% renewable electricity.</h3>
+        </div>
+        <div class="peg3last" style="background-color: rgb(31, 73, 163);">
+            <div class="peg3left" style="background-color: blue;">
+                <img src="https://i.etsystatic.com/site-assets/w2a/logo-new.svg" alt="" style="padding-top: 30%;"><br>
+                <button type="button" style="border-radius: 20%; height: 50px; width: 200px;">Download The Etsy App</button>
+            </div>
+
+            <div class="peg3right">
+                <div class="pege3rig">
+                    <h3>Shop</h3>
+                    <a href="" style="color:whitesmoke; text-decoration: none;">Gift Cards</a><br>
+                    <a href="" style="color:whitesmoke; text-decoration: none;">Etsy Registry</a><br>
+                    <a href="" style="color:whitesmoke; text-decoration: none;">Sitemap</a><br>
+                    <a href="" style="color:whitesmoke; text-decoration: none;">Etsy blog</a><br>
+                    <a href="" style="color:whitesmoke; text-decoration: none;">Etsy United Kingdom</a><br>
+                    <a href="" style="color:whitesmoke; text-decoration: none;">Etsy Germany</a><br>
+                    <a href="" style="color:whitesmoke; text-decoration: none;">Etsy Canada</a><br>
+                </div>
+                <div class="pege3rig">
+                    <h3>Sell</h3>
+                    <a href="" style="color:whitesmoke; text-decoration: none; ">Gift Cards</a><br>
+                    <a href="" style="color:whitesmoke; text-decoration: none;">Etsy Registry</a><br>
+                    <a href="" style="color:whitesmoke; text-decoration: none;">Sitemap</a><br>
+                    <a href="" style="color:whitesmoke; text-decoration: none;">Etsy blog</a><br>
+                </div>
+                <div class="pege3rig">
+                    <h3>About</h3>
+                    <a href="" style="color:whitesmoke;text-decoration: none;">Gift Cards</a><br>
+                    <a href="" style="color:whitesmoke;text-decoration: none;">Etsy Registry</a><br>
+                    <a href="" style="color:whitesmoke;text-decoration: none;">Sitemap</a><br>
+                    <a href="" style="color:whitesmoke;text-decoration: none;">Etsy blog</a><br>
+                    <a href="" style="color:whitesmoke;text-decoration: none;">Etsy United Kingdom</a><br>
+                    <a href="" style="color:whitesmoke;text-decoration: none;">Etsy Germany</a><br>
+                    <a href="" style="color:whitesmoke;text-decoration: none;">Etsy Canada</a><br>
+                </div>
+                <div class="pege3rig">
+                    <h3>Help</h3>
+                    <a href="" style="color:whitesmoke; text-decoration: none;">Help Center</a><br>
+                    <a href="" style="color:whitesmoke; text-decoration: none; ">Privacy Sattings</a><br>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

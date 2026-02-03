@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bars</title>
+    <style>
+        /* 1. Page Setup */
+        body {
+            background-color: #1a1a1a; /* Dark background */
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* 2. Container for the list */
+        .stats-container {
+            width: 400px; /* Adjust width as needed */
+        }
+
+        /* 3. Individual Progress Item Wrapper */
+        .progress-item {
+            margin-bottom: 25px; /* Space between bars */
+        }
+
+        /* 4. Text Row (Label and Percentage) */
+        .text-row {
+            display: flex;
+            justify-content: space-between; /* Pushes text to far left and far right */
+            margin-bottom: 8px; /* Space between text and bar */
+            font-weight: 700;   /* Bold text */
+            font-size: 1.1rem;
+        }
+
+        /* 5. The Grey Background Track */
+        .bar-track {
+            background-color: #333; /* Dark grey line */
+            height: 6px;            /* Thickness of the bar */
+            border-radius: 3px;     /* Rounded edges */
+            width: 100%;
+            overflow: hidden;       /* Ensures fill doesn't spill out */
+        }
+
+        /* 6. The Orange Fill */
+        .bar-fill {
+            background-color: #ffb700; /* The orange/yellow color */
+            height: 100%;
+            border-radius: 3px;
+            /* Width is set inline in the HTML below */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stats-container">
+        
+        <div class="progress-item">
+            <div class="text-row">
+                <span>Community</span>
+                <span>77%</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width: 77%;"></div>
+            </div>
+        </div>
+
+        <div class="progress-item">
+            <div class="text-row">
+                <span>Team and Developers</span>
+                <span>65%</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width: 65%;"></div>
+            </div>
+        </div>
+
+        <div class="progress-item">
+            <div class="text-row">
+                <span>Token Sale and Pre-Sale</span>
+                <span>88%</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width: 88%;"></div>
+            </div>
+        </div>
+
+        <div class="progress-item">
+            <div class="text-row">
+                <span>Marketing</span>
+                <span>10%</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width: 10%;"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

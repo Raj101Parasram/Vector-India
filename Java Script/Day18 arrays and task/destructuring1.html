@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructuring</title>
+</head>
+<body>
+    <script>
+        /*
+        let a=[["html","css","js"],["python","mongoDB"]]
+        let [frontEnd,backEnd]=a
+        console.log(frontEnd)
+        console.log(backEnd[1])
+        let [forntend,[py,mono]]=a
+        console.log(py)
+        let [[h,c,j],[p,m]]=a
+        console.log(j)
+
+// methods
+
+        // 1 length
+        
+        let x=["ht","cs","js","pu","mo"]
+        console.log(x.length)
+
+        // 2 at()
+        console.log(x.at(2))
+        console.log(x.at(-1))
+        let y=x.at(3)
+        console.log(y)
+
+        // 3 concat()
+
+        let z=["nd","rj"]
+        let s=x.concat(z,y,a)
+        console.log(s)
+
+        // 4.1 splice() add
+
+        let arr=["html","css","js","python","mongoDB"]
+        console.log(arr)
+        arr.splice(2,0,"ExpressJS","ReactJS")
+        console.log(arr)
+
+        // 4.2 splice() update
+        arr.splice(1,2,"Cascading Style Sheets","JavaScript")
+        console.log(arr)
+
+        // 4.3 splice() delete
+        arr.splice(3,1)
+        console.log(arr)
+                                         */        
+
+        // 5 slice()
+        let arr=["html","css","js","python","mongoDB"]
+        let fend=arr.slice(0,4)
+        console.log(fend)
+
+        // 6 push()
+
+        arr.push("reactJS")
+        console.log(arr)
+
+        // 7 pop()
+
+        console.log("pop value is " +arr.pop())
+        arr.pop()
+        console.log(arr)
+
+        // 8 shift()
+
+        arr.shift()
+        console.log(arr +"   &    shifted array: " + arr.shift())
+
+        // 9 unshift()
+
+        arr.unshift("HTML","CSS")
+        console.log(arr)
+
+        // 10 sort()
+
+        let number=[1,5,6,8,22,53,10,11,3]
+        number.sort()
+        console.log(number.sort())
+
+        // 11 reverse()
+        let rev=[1,2,3,55,6,9,4]
+        rev.reverse()
+        console.log(rev)
+
+        // 12 join()
+
+        rev.join("  ")
+        console.log(rev.join("  "))
+        console.log(rev.join(" $ "))
+        console.log(rev.join("--"))
+
+        // 13 flat()
+        let a=[[1,2,3],5,[4,5,6],[7,8,9],11]
+        console.log(a.flat().join(" | "))
+        </script>
+</body>
+</html>

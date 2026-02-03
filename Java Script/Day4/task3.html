@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let amt= +prompt("Enter purchase Amount in $")
+        if (amt<50){
+            console.log("Your Purchase Amount is ", amt)
+            console.log("So you Don't Get Any Discount")
+        }
+        else if (amt<=100){
+            console.log("Your Purchase Amount is ", amt)
+            console.log("So you got 5% Discount")
+            dis=amt * 0.05
+            console.log("Discount Amount is ", dis, "And the Total Amount is", amt-dis)
+        }
+        else if (amt<=200){
+            console.log("Your Purchase Amount is ", amt)
+            console.log("So you got 10% Discount")
+            dis=amt*0.1
+            console.log("Discount Amount is ", dis, "And the Total Amount is", amt-dis)
+
+        }
+        else if (amt>200){
+            console.log("Your Purchase Amount is ", amt)
+            console.log("So you got 15% Discount")
+            dis=amt*0.15
+            console.log("Discount Amount is ", dis, "And the Total Amount is", amt-dis)
+
+        }
+        else{
+            console.log("You Did not Purchase any thing")
+        }
+    </script>
+</body>
+</html>

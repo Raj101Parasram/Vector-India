@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // for in loop    //
+        let s=[1,2,3,4,5,6]
+        for(i in s){
+            console.log(i,":",s[i])
+        }
+        console.log(s)
+        let a="hello world"
+        for (i in a){
+            console.log(i,a[i])
+        }
+        console.log(a)
+        b={
+            name:"raj",
+            age:23,
+            class: "js" 
+        }
+        for (let i in b){
+            console.log(i,":",b[i])
+        }
+        console.log(b)
+        let o=['htem', 'css', 'js', 'python']
+        for (var i in o){
+            console.log(i, o[i])
+        }
+            console.log(o)
+
+            //   for of loop  //
+
+            let c=[1,2,3,4,5,6]
+            for (i of c){
+                console.log(i)
+            }
+            console.log(c)
+            let d='hello world'
+            for (let i of d){
+                console.log(i)
+            }
+            console.log(d)
+        let f=['htem', 'css', 'js', 'python']
+        for (var i of f){
+            console.log(i)
+        }
+            console.log(f)
+
+
+            //  basic for loop  //
+        
+        for (var i=1; i<=5; i++){
+            console.log(i)
+        }
+        console.log("outer (i)",i)
+        
+        console.log("")
+        let esum=0;
+        let osum=0;
+        for (var i=1; i<=50; i++){
+            if (i%2==0){
+                esum+=i
+            }
+            else{
+                osum+=i
+            }
+        }
+        console.log(esum,osum)
+    </script>
+</body>
+</html>

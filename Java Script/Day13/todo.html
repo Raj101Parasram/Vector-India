@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button onclick="fun()">Click</button>
+
+    <script>
+        function fun(){
+            let inp=document.querySelector("input")
+            let ul=document.createElement("ul")
+            let li=document.createElement("li")
+            document.body.appendChild(ul)
+            li.innerText=inp.value
+            ul.appendChild(li)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("task1")
+        function lol(n){
+            console.log("Hello,", n)
+        }
+        lol("Raj")
+
+        console.log("task2")
+        function sum(a,b){
+            console.log("sum of A and B is ", a+b)
+        }
+        sum(2,5)
+
+        console.log("task3")
+        let squ=prompt("enter a number for calculating square")
+        function sqr(a){
+            console.log("Square of", squ, "is ", a**2)
+        }
+        sqr(squ)
+        console.log(sqr)
+
+
+        console.log("task4")
+        function avg(arr) {
+            sum =0
+            for (num of arr) {
+                sum += num
+            }
+            return sum/arr.length
+        }
+
+        console.log(avg([1,2,3,4,5]))
+        
+        console.log("task5")
+        let temp=prompt("Enter temperature")
+        function cel(a){
+            console.log("temperature in celscious is ",(a - 32) * 5/9)
+        }
+        function fer(a){
+            console.log("temperature in fahrehnheit is ", (a * 9/5) + 32)
+        }
+        cel(temp)
+        fer(temp)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        
+        <!-- 
+        
+        https://ui.glass/generator/--glass morphism
+
+        animate.css -----cdn ---classname
+
+        aos library---copy css cdn at top 
+             and script1 and script 2 at bottom
+             add data-aos attribute 
+        
+    https://superdesigner.co/tools/color-generator---color combinatio
+    https://superdesigner.co/tools/backgrounds?type=split
+    freefrontend.com
+    uiverse.io
+    https://cssgradient.io/
+    codepen cards
+
+    
+        -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* 
+      project approach
+  1) project should be responsive 
+  2) dont use positions unnecessary
+  3) dont use px for larger values 400px 300px 
+     always use relative units % , rem for fontsize, 
+  4) add AOS library
+  5) sliders , counters, carousel - copy from third party websites
+        
+ 1)  
+ html,body{
+    scroll-behavior: smooth;
+}
+2) boiler plate
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+3) 
+html,body{
+overflow-x:hidden;
+}
+4) use border for debugging
+5) study how many sections
+.sec3,.sec4,.sec5,.sec6{
+            border:1px solid red;
+            height:100vh;
+        }
+6) study each section add html and css
+        */
+     
+     .sec3,.sec4,.sec5,.sec6{
+            border:1px solid red;
+            height:100vh;
+        }
+
+        .sec1{
+            z-index: 10;
+            background:navy;
+            color:white;
+            padding: 3px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 20vh;
+            position: sticky;
+            top:0;
+        }
+        .sec1b>ul{
+            display: flex;
+            gap:20px;
+        }
+        li{
+            list-style-type: none;
+        }
+
+        .sec2{
+            background:navy;
+            color:white;
+            padding: 3px 5%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        img{
+            width: 100%;
+        }
+        .btn{
+            color:navy;
+            background: white;
+            padding: 10px;
+            outline: none;
+            border: none;
+            border-radius: 10%;
+
+        }
+
+.box{
+    position: absolute;
+    width:30%;
+    background: white;
+    right:10px;
+    display: none;
+    color:black;
+    top:70px;
+
+}
+        .box>div{
+            
+            border:1px solid;
+            
+        }
+
+        @media screen and (width<576px){
+            .sec2{
+            grid-template-columns: 1fr;
+            font-size: 0.7rem;
+            height: 100%;
+            }
+            .sec1b{
+                display: none;
+            }
+            .clck:hover~.box{
+                display: block;
+            }
+
+      
+        }
+
+    
+    </style>
+    </head>
+<body>
+
+    <div class="sec1">
+        <h1 class="sec1a">business</h1>
+        <div class="sec1b">
+            <ul>
+                <li>home</li>
+                <li>about</li>
+                <li>services</li>
+                <li>contact</li>
+            </ul>
+        </div>
+       <button  class="sec1c clck">icon</button>
+
+        <div class="box">
+            <div>home</div>
+            <div>about</div>
+            <div>services</div>
+        </div>
+    </div>
+    
+    <div class="sec2">
+        <div class="sec2a" data-aos="zoom-out-right">
+            <h2>Corporate & Business Site Template by Ayro UI.</h2>
+             <p>We are a digital agency that helps brands to achieve their business outcomes. We see technology as a tool to create amazing things.</p>
+            <button class="btn">GET Started</button> <span>intro</span>
+            </div>
+        <div class="sec2b" data-aos="zoom-out-left">
+            <img src="https://demo.ayroui.com/templates/business-template/assets/images/header/hero-image.jpg" alt="">
+        </div>
+    </div>
+    <div class="sec2" style="background-color: white;color:black">
+        <div class="sec2b" data-aos="zoom-out-right">
+            <img src="https://demo.ayroui.com/templates/business-template/assets/images/header/hero-image.jpg" alt="">
+        </div>
+        <div class="sec2a" data-aos="zoom-out-left">
+            <h2>Corporate & Business Site Template by Ayro UI.</h2>
+             <p>We are a digital agency that helps brands to achieve their business outcomes. We see technology as a tool to create amazing things.</p>
+            <button class="btn">GET Started</button> <span>intro</span>
+            </div>
+    </div>
+    <div class="sec3">content</div>
+    <div class="sec4">content</div>
+    <div class="sec5">content</div>
+    <div class="sec6">content</div>
+    <div class="sec7">content</div>
+    <div class="sec8">content</div>
+    <div class="sec9">content</div>
+    <div class="sec10">content</div>
+    <div class="sec11">content</div>
+    <div class="sec12">content</div>
+    <div class="sec13">content</div>
+    <div class="sec14">content</div>
+       
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+      </script>
+      </body>
+</html>

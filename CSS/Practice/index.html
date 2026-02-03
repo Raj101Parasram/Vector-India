@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arjad's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>Arjad's Portfolio</h2>
+    <nav>
+        <a href="#">Summary</a>
+        <a href="#">About</a>
+        <a href="#">Skills</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+        <button id="toggle">🌙</button>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <p class="intro">Hey! I'm</p>
+        <h1>Arjad Gohar</h1>
+        <h3>FullStack Developer</h3>
+
+        <p class="desc">
+            I am a skilled software developer delivering high-quality solutions.
+            My expertise spans frontend and backend development using Vue.js,
+            React.js, Ruby on Rails, and Python.
+        </p>
+
+        <div class="buttons">
+            <button class="outline">View Resume</button>
+            <button class="filled">Contact Info</button>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="circle">
+            <img src="profile.png" alt="profile">
+        </div>
+    </div>
+</section>
+
+<script>
+const toggle = document.getElementById("toggle");
+toggle.onclick = () => {
+    document.body.classList.toggle("dark");
+};
+</script>
+
+</body>
+</html>

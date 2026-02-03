@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static ICO Timer</title>
+    <style>
+        /* 1. Page Background Setup */
+        body {
+            background-color: #111; /* Matches the dark background */
+            color: #ffffff;
+            font-family: sans-serif; /* Clean font like the image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* 2. Main Container */
+        .countdown-wrapper {
+            display: inline-block;
+            text-align: left;
+        }
+
+        /* "ICO Ends in:" Label */
+        .heading {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #eeeeee;
+            margin-bottom: 15px; /* Space between text and numbers */
+        }
+
+        /* 3. The Row holding the numbers */
+        .timer-row {
+            display: flex; /* Aligns items side-by-side */
+            flex-direction: row;
+        }
+
+        /* 4. Individual Time Blocks (Weeks, Days, etc) */
+        .time-block {
+            display: flex;
+            flex-direction: column; /* Stacks Number on top of Label */
+            align-items: center;
+            padding: 0 20px; /* Space on left/right of numbers */
+            position: relative; /* Needed to anchor the vertical line */
+        }
+
+        /* Remove padding from the very first block so it aligns left */
+        .time-block:first-child {
+            padding-left: 0;
+        }
+
+        /* Remove padding from the very last block */
+        .time-block:last-child {
+            padding-right: 0;
+        }
+
+        /* 5. The Big Numbers */
+        .num {
+            font-size: 3.5rem; /* Large text */
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        /* 6. The Labels (Weeks, Days) */
+        .label {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #dddddd; /* Slightly grey/white */
+        }
+
+        /* 7. The Vertical Separator Line */
+        /* We put a line after every block, except the last one */
+        .time-block:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;       /* Stick to the right edge */
+            top: 15%;       /* Start 15% down from top */
+            height: 70%;    /* Only span 70% of the height */
+            width: 1px;     /* Thin line */
+            background-color: #555; /* Grey line color */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="countdown-wrapper">
+        <div class="heading">ICO Ends in:</div>
+
+        <div class="timer-row">
+            <div class="time-block">
+                <span class="num">00</span>
+                <span class="label">Weeks</span>
+            </div>
+
+            <div class="time-block">
+                <span class="num">00</span>
+                <span class="label">Days</span>
+            </div>
+
+            <div class="time-block">
+                <span class="num">00</span>
+                <span class="label">Hours</span>
+            </div>
+
+            <div class="time-block">
+                <span class="num">00</span>
+                <span class="label">Minutes</span>
+            </div>
+
+            <div class="time-block">
+                <span class="num">00</span>
+                <span class="label">Seconds</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjad's Portfolio Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* 1. Global Reset & Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa; /* Light grey/white background */
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* 2. Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: transparent;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+        /* The Toggle Switch Icon */
+        .toggle-switch {
+            font-size: 1.2rem;
+            color: #333;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        /* 3. Hero Section (Main Content) */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 10%;
+            min-height: 80vh; /* Takes up most of the screen height */
+        }
+
+        /* --- Left Column: Text --- */
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .greeting {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .name {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        .role {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* The Blinking Cursor Effect */
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 20px;
+            background-color: #000;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+            max-width: 90%;
+        }
+
+        /* Buttons */
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #333;
+            color: #333;
+        }
+        .btn-outline:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        .btn-fill {
+            background: #222;
+            border: 2px solid #222;
+            color: #fff;
+        }
+        .btn-fill:hover {
+            background: #444;
+            border-color: #444;
+        }
+
+        /* Social Icons */
+        .socials a {
+            font-size: 1.5rem;
+            color: #333;
+            margin-right: 15px;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .socials a:hover {
+            transform: translateY(-3px);
+        }
+
+        /* --- Right Column: Image --- */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* The Green Circle Background */
+        .image-bg {
+            width: 400px;
+            height: 400px;
+            background-color: #10b981; /* The green color */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* Aligns image to bottom of circle */
+            overflow: hidden; /* Crops the image into a circle */
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+        }
+
+        .image-bg img {
+            width: 90%; /* Adjust based on your actual photo */
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* 4. Responsive Design (Mobile) */
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column-reverse; /* Stacks image on top, text on bottom */
+                text-align: center;
+                padding-top: 30px;
+            }
+
+            .hero-text {
+                margin-top: 40px;
+            }
+
+            .role {
+                justify-content: center;
+            }
+
+            .btn-container {
+                justify-content: center;
+            }
+            
+            .description {
+                margin: 0 auto 30px auto;
+            }
+
+            .image-bg {
+                width: 300px;
+                height: 300px;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Arjad's Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#">Summary</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="toggle-switch"><i class="fas fa-toggle-on"></i></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        
+        <div class="hero-text">
+            <p class="greeting">Hey! I'm</p>
+            <h1 class="name">Arjad Gohar</h1>
+            
+            <div class="role">
+                FullStack Developer <span class="cursor"></span>
+            </div>
+            
+            <p class="description">
+                I am a skilled software developer delivering high-quality solutions across diverse projects. My expertise spans front-end and back-end development, including Vue.js, React.js, Ruby on Rails and Python.
+                <br><br>
+                I specialize in creating user-friendly interfaces and scalable systems to meet client needs.
+            </p>
+
+            <div class="btn-container">
+                <a href="#" class="btn btn-outline">View Resume</a>
+                <a href="#" class="btn btn-fill">Contact Info</a>
+            </div>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="image-bg">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" alt="Profile">
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>

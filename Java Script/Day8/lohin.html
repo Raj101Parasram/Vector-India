@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="login()">login</button>
+  
+  
+  
+    <script>
+        function login(){
+            let username=prompt("Enter your username")
+            let password=prompt("Enter your password")
+            if (username==="admin" && password==="12345"){
+                alert("Login successful")
+            } else {
+                alert("Login failed")
+            }
+        }
+    </script>
+
+</body>
+</html>

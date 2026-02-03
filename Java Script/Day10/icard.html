@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading{
+            text-align: center;
+            color: blue;
+        }
+        .outerbox{
+            width: 500px;
+            height: auto;
+            border: 2px solid black;
+            margin: auto;
+            padding: 20px;
+            height: auto;
+            text-align: center;
+        }
+        ul{
+            list-style-type: none;
+            padding-right: 7%;
+            color: rgb(242, 248, 242);
+            background-color: rgb(100, 79, 79);
+            margin: 10%;
+            ;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="heading">ICard</h1>
+    <div class="outerbox">
+    <button onclick="adddata()">Add Information</button>
+    <ul>
+
+    </ul>
+    </div>
+
+    <script>
+
+        function adddata(){
+    let ul=document.querySelector('ul')
+    let inp=prompt('enter Your Name')
+    let age=prompt('enter Your Age')
+    let dob=prompt('enter Your Date of Birth')
+    let city=prompt("enter youtr city")
+    let Branch=prompt("enter your Branch")
+    inp=`Name: ${inp} <br><br> Age: ${age} <br><br> DOB: ${dob} <br><br> City: ${city} <br><br> Branch: ${Branch}`
+    let li=document.createElement('li')
+    li.innerHTML=inp
+    ul.append(li)
+    }
+    </script>
+</body>
+</html> 

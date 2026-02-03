@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cart(a){
+            console.log("added to cart")
+            a(ord)
+        }
+        function payment(b){
+            console.log("payment is done")
+            b()
+        }
+        function ord(){
+            console.log("order is placed")
+        }
+        cart(payment)
+
+        console.log("another program")
+
+        
+    </script>
+</body>
+</html>

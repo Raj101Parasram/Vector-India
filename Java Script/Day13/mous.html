@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let button2=document.createElement('button')
+        button2.innerText='button2'
+            
+        document.body.append(button2)
+            
+        // mouse events
+        //click
+        button2.addEventListener('click',function fun(){
+            console.log('mouse is clicked')
+        })
+        // dblclick
+        button2.addEventListener('dblclick',function fun(){
+           button2.style.background='red'
+        })
+        //mouseover
+        button2.addEventListener('mouseover',function fun(){
+           document.body.style.background='red'
+        })
+        //mouseout
+        button2.addEventListener('mouseout',function fun(){
+           document.body.style.background='lightblue'
+        })
+        //mouse move
+        button2.addEventListener('mousemove',function fun(){
+           console.log('moved over an mouse')
+        })
+
+    </script>
+</body>
+</html>
