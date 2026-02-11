@@ -7,5 +7,95 @@
 </head>
 <body>
     
+
+    <script>
+       /*
+        // 1. indexOf() method
+        const str = "Hello, world!";
+        console.log(str.indexOf("world")); // Output: 7
+
+        let arr=['html',"css", "javascript", 'python', "asfvv"];
+        console.log("index number is " + arr.indexOf("javascript",2));
+
+        // lastIndexOf() method
+        console.log(arr.lastIndexOf("css",1))
+
+
+        // 2. includes() method
+        console.log(str.includes("Hello")); // Output: true
+
+        console.log(arr.includes("css"))
+        console.log(arr.includes('react'))
+
+        // 3. search() method
+        const regex = "world";
+        console.log(str.search(regex)); // Output: 7
+
+        */
+        // create a application which update, delete and vewe all opprations
+
+        let std=["jessy"]
+        let flag=true
+
+        while(flag){
+            let inp=prompt("enter option")
+
+            switch(inp){
+                case "1":
+                    let newstd=prompt("enter new name")
+                    std.push(newstd)
+                    break;
+                case "2":
+                    console.log(std)
+                    break;
+                case "3":
+                    let ename=prompt("enter which you want to update")
+                    let enameind=std.indexOf(ename)
+                    if (enameind ==-1){
+                        console.log("name not found")
+                    }else{
+                        let newname=prompt("enter a updated name")
+                        std.splice(enameind,1,newname)
+                        console.log("its updated")
+                    }
+                    break;
+                case "4":
+                    let delname=prompt("enter which you want to delete")
+                    let delnameind=std.indexOf(delname)
+                    if (delnameind ==-1){
+                        console.log("name not found")
+                    }else{
+                        std.splice(delnameind,1)
+                        console.log("name is deleted")
+                    }
+                    break
+                case "5":
+                    let searchname=prompt("enter which you want to search")
+                    
+                    if (std.includes(searchname)){
+                        console.log(searchname, "is found")
+                    }else{
+                        console.log(searchname, "is not found")
+                    }
+                    break
+                case "6":
+                    std.sort()
+                    console.log("sorted successfully")
+                    break
+                case "7":
+                    std.reverse()
+                    console.log("reversed successfully")
+                    break;
+                case "8":
+                    console.log("operation exited")
+                    flag=false
+                    break;
+
+            }
+        }
+
+
+
+    </script>
 </body>
 </html>

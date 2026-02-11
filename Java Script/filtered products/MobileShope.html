@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Shop</title>
+    <style>
+        .header{
+            text-align: center;
+            color: blue;
+        }
+        .filtersname{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            justify-content: space-around;
+        }
+        .filtertag{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            justify-content: space-evenly;
+            padding-bottom: 100px;
+        }
+        .main1{
+            padding-left: 450px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:20px;
+            row-gap: 50px;
+            padding-left: 190px;
+            width: 157vh;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(169, 162, 162);">
+
+    <!-- main header and filter area -->
+    <h1 class="header">Mobile Shop</h1>
+    <div class="main1">
+        <div class="filtersname">
+            <h3 style="padding-left: 10px;">Filtered by brand</h3>
+            <h3 style="padding-left: 5px;">Filtered by max price</h3>
+            <h3 style="padding-left: 15px;">Sort by price</h3>
+        </div>
+        <div class="filtertag">
+            <select name="" id="brandfilter" style="width: 180px; height: 25px;">
+                <option id="all" value="all">All</option>
+                <option id="apple" value="apple">Apple</option>
+                <option id="samsung" value="samsung">Samsung</option>
+                <option id="onePlus" value="onePlus">OnePlus</option>
+            </select>
+    
+            <input type="text"  id="searchbyprice" placeholder="Enter Max Price" style="width: 175px; height: 20px;">
+    
+            <select name="" id="sortedbyprice" style="width: 180px; height: 25px;">
+                <option value="normal">Normal</option>
+                <option value="high">high-low</option>
+                <option value="low">low-high</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Mobile carts -->
+
+    <div class="container" >
+
+    </div>
+
+    <!-- Script Area -->
+
+    <script>
+        /*{
+                brand: "apple",
+                name: "iPhone 15",
+                price: 80000,
+                img: "https://picsum.photos/seed/apple1/200"
+            },
+         */
+
+         // Array of products
+            let products = [
+            {
+                brand: "apple",
+                name: "iPhone 15",
+                price: 80000,
+                img: "https://picsum.photos/seed/apple1/200"
+            },
+            {
+                brand: "samsung",
+                name: "Galaxy S23",
+                price: 70000,
+                img: "https://picsum.photos/seed/samsung1/200"
+            },
+            {
+                brand: "onePlus",
+                name: "OnePlus 11",
+                price: 55000,
+                img: "https://picsum.photos/seed/oneplus1/200"
+            },
+            {
+                brand: "apple",
+                name: "iPhone 14",
+                price: 60000,
+                img: "https://picsum.photos/seed/apple2/200"
+            },
+            {
+                brand: "samsung",
+                name: "Galaxy A52",
+                price: 25000,
+                img: "https://picsum.photos/seed/samsung2/200"
+            },
+            {
+                brand: "onePlus",
+                name: "Nord CE 3",
+                price: 28000,
+                img: "https://picsum.photos/seed/oneplus2/200"
+            },
+            {
+                brand: "apple",
+                name: "iPhone 13",
+                price: 50000,
+                img: "https://picsum.photos/seed/apple3/200"
+            },
+            {
+                brand: "samsung",
+                name: "Galaxy S22",
+                price: 62000,
+                img: "https://picsum.photos/seed/samsung3/200"
+            },
+            {
+                brand: "onePlus",
+                name: "OnePlus 10R",
+                price: 38000,
+                img: "https://picsum.photos/seed/oneplus3/200"
+            },
+            {
+                brand: "apple",
+                name: "iPhone SE",
+                price: 42000,
+                img: "https://picsum.photos/seed/apple4/200"
+            },
+            {
+                brand: "samsung",
+                name: "Galaxy F54",
+                price: 30000,
+                img: "https://picsum.photos/seed/samsung4/200"
+            },
+            {
+                brand: "onePlus",
+                name: "Nord N30",
+                price: 24000,
+                img: "https://picsum.photos/seed/oneplus4/200"
+            },
+            {
+                brand: "apple",
+                name: "iPhone 12",
+                price: 45000,
+                img: "https://picsum.photos/seed/apple5/200"
+            },
+            {
+                brand: "samsung",
+                name: "Galaxy M34",
+                price: 18000,
+                img: "https://picsum.photos/seed/samsung5/200"
+            },
+            {
+                brand: "onePlus",
+                name: "OnePlus 9",
+                price: 33000,
+                img: "https://picsum.photos/seed/oneplus5/200"
+            },
+            {
+                brand: "apple",
+                name: "iPhone 11",
+                price: 40000,
+                img: "https://picsum.photos/seed/apple6/200"
+            },
+            {
+                brand: "samsung",
+                name: "Galaxy Z Flip",
+                price: 90000,
+                img: "https://picsum.photos/seed/samsung6/200"
+            },
+            {
+                brand: "onePlus",
+                name: "OnePlus 8T",
+                price: 29000,
+                img: "https://picsum.photos/seed/oneplus6/200"
+            },
+            {
+                brand: "apple",
+                name: "iPhone XR",
+                price: 35000,
+                img: "https://picsum.photos/seed/apple7/200"
+            },
+            {
+                brand: "samsung",
+                name: "Galaxy Note 20",
+                price: 65000,
+                img: "https://picsum.photos/seed/samsung7/200"
+            }
+      
+        ];
+
+        function display(arr){
+             container=document.querySelector('.container')
+             container.innerHTML=''
+
+            arr.forEach((val)=>{
+            let card=document.createElement('div')
+            card.innerHTML=`
+            <img src=${val.img} style="width: 350px; height: 350px;">
+            <h1 style="text-align : right">${val.brand}</h1>
+            <h3>${val.name}</h3>
+            <p>${val.price}</p>
+            `
+            container.append(card)
+            })
+        }
+        display(products)
+
+        // filter condition for brand
+        let filterbybrand = document.querySelector('#brandfilter')
+        filterbybrand.addEventListener('change',()=>{
+            let filtere=products.filter((val)=>{
+                return val.brand==filterbybrand.value
+            })
+            display(filtere)
+            if(filterbybrand.value=='all'){
+                display(products)
+            }
+        })
+        
+        // filter condition for price
+        
+        let filterbyprice = document.querySelector("#searchbyprice")
+        filterbyprice.addEventListener("input",()=>{
+            console.log(filterbyprice.value)
+            let filterc=products.filter((val)=>{
+                return val.price<filterbyprice.value
+            })
+            display(filterc)
+            
+            if(filterbyprice.value==""){
+                display(products)
+            }
+        })
+        
+        // filter condition for sort-price
+        
+        let filterbysort=document.querySelector("#sortedbyprice")
+        filterbysort.addEventListener("change",()=>{
+            console.log(filterbysort.value)
+            if(filterbysort.value=="high"){
+                let sortf=products.sort((a,b)=>{
+                    return b.price-a.price
+                })
+                display(sortf)
+            }
+            if (filterbysort.value=='low'){
+                let sortff=products.sort((a,b)=>{
+                    return a.price-b.price
+                })
+                display(sortff)
+            }
+        })
+        
+        if(filtere=="samsung"||"apple"||"onePluse" && filterc){
+            display(filterc)
+        }
+        
+    </script>
+</body>
+</html>

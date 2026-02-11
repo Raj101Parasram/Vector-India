@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+            
+        // foreach function
+
+        let arr=['html','css','js','py']
+        arr.forEach((val,ind,ar)=>{
+            console.log(val)
+            console.log(ind)
+            console.log(ar)
+        })
+
+        // map function
+
+        let arr1=[1,2,3,4,56,7]
+        let arr2=arr1.map((v,i,a)=>{
+            return v*v + i+i
+        })
+        console.log(arr2)
+
+        let newarr=arr.map((v,i,a)=>{
+            return 'frontende skilles '+v
+        })
+        console.log(newarr)
+
+        // 
+    </script>
+</body>
+</html>

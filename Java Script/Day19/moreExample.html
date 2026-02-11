@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+    <script>
+
+        // which one is first ittrate max or min in array
+        let arr=[10,2,36,5,8,6,1,4,7]
+        let max=arr[0]
+        let min=arr[0]
+        let maxind=0
+        let minind=0
+        for( i in arr){
+            if(arr[i]>max){
+                max=arr[i]
+                maxind=i
+            }else if(arr[i]<min){
+                min=arr[i]
+                minind=i
+            }
+        }
+        if(maxind<minind){
+            console.log("max index is first " + maxind)
+        }else{
+            console.log("min index is first " + minind)
+        }
+
+        // check array have dublicate value or not
+
+        let arr1=[10,2,36,5,1,8,6,1,4,7]
+        let demo=[]
+        for(i of arr1){
+            if(!demo.includes(i)){
+                demo.push(i)
+            }
+        }
+        if(demo.length==arr1.length){
+            console.log("no dublicate value")
+        }else{
+            console.log("dublicate value")
+        }
+
+        // check in array indesx is prime or not if it is prime give true if not give false
+
+        let arr2=[10,2,36,5,1,8,6,1,4,7]
+        let out=[]
+        function isprime(n){
+            for (i=2;i<n;i++){
+                if(n%i==0){
+                    return false
+                }
+            }
+            return true
+        }
+        for (i of arr2){
+            out.push(isprime(i))
+        }
+        console.log(out)
+    </script>
+</body>
+</html>
