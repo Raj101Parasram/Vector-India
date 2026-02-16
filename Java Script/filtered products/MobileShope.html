@@ -236,6 +236,7 @@
         
         let filterbyprice = document.querySelector("#searchbyprice")
         filterbyprice.addEventListener("input",()=>{
+
             console.log(filterbyprice.value)
             let filterc=products.filter((val)=>{
                 return val.price<filterbyprice.value

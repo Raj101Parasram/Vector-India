@@ -10,7 +10,7 @@
 
     <script>
             
-        // foreach function
+        // foreach function is use for itration
 
         let arr=['html','css','js','py']
         arr.forEach((val,ind,ar)=>{
@@ -19,7 +19,7 @@
             console.log(ar)
         })
 
-        // map function
+        // map function is use for update array values
 
         let arr1=[1,2,3,4,56,7]
         let arr2=arr1.map((v,i,a)=>{
@@ -32,7 +32,62 @@
         })
         console.log(newarr)
 
-        // 
+        // (filter) sirch and print those values
+
+        let fil=[1,2,3,4,56,7]
+        let newfil=fil.filter((v)=>{
+            return v%2==0
+        })
+        console.log(newfil)
+
+        // (reduce) means total sum of array
+
+        let totalsum=fil.reduce((e,v,i,ar)=>{
+            return e+v
+        },0)
+        console.log(totalsum)
+
+        // (sort) is use for to arrange data in assending or dissending order
+
+        let num=[1,5,6,8,2,10,45]
+        let sortnum=num.sort((a,b)=>{
+            return b-a
+            return a-b
+        })
+        console.log(sortnum)
+
+
+        // (some) is use for check the condition is tru or false 
+
+        let somenum=num.some((val)=>{
+            return val>55
+        })
+        console.log(somenum)
+
+        // (every) is use for check the condition is satisfy or not & after chek it will return bullin values
+
+        let evernum=num.every((va)=>{
+            return va<100
+        })
+        console.log(evernum)
+
+        // (find) is use for surching the condition result in array as similar to (filter) BUT 
+        //in this function only one value will return which will be the biggest
+
+        let findnum=num.find((vvv)=>{
+            return vvv%2==0
+        })
+        console.log(findnum)
+
+/*
+        let arrr=['html','css','js','py']
+        let lol= arrr.reduce((a,b)=>{
+            return a+" "+b
+        }).map((vv,a,i)=>{
+            return 'hhee'+vv
+        })
+        console.log(lol)
+*/
     </script>
 </body>
 </html>

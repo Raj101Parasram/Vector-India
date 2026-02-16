@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOF examples</title>
+</head>
+<body>
+    <!-- /*
+
+const products = [
+  { name: "Laptop", price: 70000, rating: 4.5, inStock: true },
+  { name: "Phone", price: 35000, rating: 4.2, inStock: true },
+  { name: "Tablet", price: 25000, rating: 3.8, inStock: true },
+  { name: "Headphones", price: 4000, rating: 4.8, inStock: true },
+  { name: "Smartwatch", price: 15000, rating: 4.0, inStock: false },
+];
+add gst
+filter based on rating
+total inventory cost
+sort by price and rating
+check stock
+verify ratings
+
+*/  -->
+
+<script>
+    const products = [
+               { name: "Laptop", price: 70000, rating: 4.5, inStock: true },
+               { name: "Phone", price: 35000, rating: 4.2, inStock: true },
+               { name: "Tablet", price: 25000, rating: 3.8, inStock: true },
+               { name: "Headphones", price: 4000, rating: 4.8, inStock: true },
+               { name: "Smartwatch", price: 15000, rating: 4.0, inStock: false },
+    ]
+
+    // foreach
+
+    let gst=products.map((v,i,a)=>{
+        return {a,Gst:v.price*1.18}
+    })
+    console.log(gst)
+
+    // filter
+    let filter=products.filter((v)=>{
+        return v.rating>4.1
+    })
+    console.log("Using filter, products are shown which have more then 4.1 rating", filter)
+
+
+</script>
+</body>
+</html>
