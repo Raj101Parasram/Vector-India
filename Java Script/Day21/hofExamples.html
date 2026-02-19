@@ -40,13 +40,41 @@ verify ratings
     })
     console.log(gst)
 
-    // filter
+    // filter based on rating
     let filter=products.filter((v)=>{
         return v.rating>4.1
     })
     console.log("Using filter, products are shown which have more then 4.1 rating", filter)
 
+    // total inventory cost
+    let total = products.reduce((acc, val)=>{
+        return acc+val.price
+    },0)
+    console.log("total inventory cost is ", total)
 
+    // sort by price and rating
+    let sortpric=products.sort((a,b)=>{
+        return a.price-b.price
+    })
+    console.log("sorted by price ", sortpric)
+
+    //rating
+    let sortrat=products.sort((c,d)=>{
+        return c.rating-d.rating
+    })
+    console.log("sort by rating ", sortrat)
+
+    //check stock
+    let checkstock=products.some((val)=>{
+        return val.inStock==false
+    })
+    console.log("cheking stock", checkstock)
+
+    // verify ratings
+    let veryfrat=products.every((val)=>{
+        return val.rating<4
+    })
+    console.log(veryfrat)
 </script>
 </body>
 </html>

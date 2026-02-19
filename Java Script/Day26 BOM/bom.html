@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello
+    </h1>
+    <button onclick="fun()">open</button>
+    <button onclick="funn()">Close</button>
+    <a href="./storage.html">open storage data</a>
+
+    <script>
+        //windows.alart
+        let name="Raj"
+        window.alert("From windows hello "+name)
+        
+        
+        // windows.Prompt
+        
+        let marks=window.prompt("enter marks")
+        if (marks>50){
+            alert("from alert functin your pass"+ marks)
+        }else{
+            alert("from alert functin your fail "+ marks)
+        }
+        
+
+        // window.confirm
+        let result=window.confirm("you want to delet the file? ")
+        if (result){
+            alert("deleted")
+        }
+
+        // windows.innerWidth
+        console.log(window.innerWidth)
+
+        // windows.innerHeight
+        console.log(window.innerHeight)
+
+        //window.open
+        function fun(){
+            alert("hello opening github ID")
+            window.open("https://github.com/Raj101Parasram", '_blank', widtth=250, height=250)
+        }
+
+
+        // window.close
+        function funn(){
+            if(window.confirm("are you want to closs the tab")){
+                window.close()
+            }
+        }
+
+        // Storage Object
+        // 1st Locakstorage in variable
+        let dataa="raj"
+        localStorage.setItem("name",dataa)
+
+        // 1st localstorage in array object
+        let arrr={
+            sname:"raaj",
+            sage:23
+        }
+        localStorage.setItem("stud",JSON.stringify(arrr))
+
+
+        // 2nd sessionalstorage in variable
+        let sessi="kunal"
+        sessionStorage.setItem("namee",sessi)
+        let getname=sessionStorage.getItem('namee')
+        console.log(getname)
+        document.body.append += getname
+
+        // 2nd sessionalstorage in array object
+        let arr2={
+            aname:"kunall parasram",
+            aage:27
+        }
+        sessionStorage.setItem("name2",JSON.stringify(arr2))
+        let arr2d=JSON.parse(sessionStorage.getItem('name2'))
+        console.log(arr2d)
+        document.body.innerHTML +=arr2d.aname
+        document.body.innerHTML +=arr2d.aage
+    </script>
+</body>
+</html>

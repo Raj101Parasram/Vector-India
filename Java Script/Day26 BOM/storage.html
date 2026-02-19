@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1st Locakstorage in variable
+        let data=localStorage.getItem('name')
+        document.body.innerHTML = data
+        console.log(data)
+        // document.body.append(data)
+
+        // 1st localstorage in array object
+        let sdata=JSON.parse(localStorage.getItem('stud'))
+        console.log(sdata.sname,sdata.sage)
+        document.body.innerHTML += sdata.sname
+        document.body.innerHTML += sdata.sage
+
+        // 2nd sessionalstorage in variable
+        let sessi="kunal"
+        sessionStorage.setItem("namee",sessi)
+        let getname=sessionStorage.getItem('namee')
+        console.log(getname)
+        document.body.append += getname
+
+        // 2nd sessionalstorage in array object
+        let arr2={
+            aname:"kunall parasram",
+            aage:27
+        }
+        sessionStorage.setItem("name2",JSON.stringify(arr2))
+        let arr2d=JSON.parse(sessionStorage.getItem('name2'))
+        console.log(arr2d)
+        document.body.innerHTML +=arr2d.aname
+        document.body.innerHTML +=arr2d.aage
+    </script>
+</body>
+</html>

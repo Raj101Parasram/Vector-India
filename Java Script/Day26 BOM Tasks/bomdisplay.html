@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            text-align: center;
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent"></div>
+
+
+    <script>
+        let data=JSON.parse(localStorage.getItem('students'))
+        let parent=document.querySelector('.parent')
+        console.log(data)
+        
+        data.forEach((val)=>{
+            let child=document.createElement('div')
+            child.innerHTML=`
+            <h1>Name: ${val.name}</h1>
+            <h1>Age: ${val.age}</h1>
+            
+            `
+            parent.append(child)
+            console.log(parent)
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .maincl{
+            display: flex;
+            -ms-flex-align: center;
+            gap: 50px;
+            text-align: center;
+            align-items: center;
+            padding-bottom: 20px;
+            padding-left: 490px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <a href="./bomdisplay.html">BOMdisplay</a>
+    <form action="">
+        <div class="maincl">   
+            <div>
+                <h2>Enter Name :</h2> 
+                <input type="text" style="width: 200px; height:20px">
+            </div>
+            <div>    
+                <h2>Enter Age:</h2>
+                <input type="text" style="width: 200px; height:20px">
+            </div>
+        </div>
+        <button type="submit">submit</button>
+    </form>
+
+    <script>
+        let form = document.querySelector('form')
+        let arr=[]
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault()
+            let obj={
+                name:e.target[0].value,
+                age:e.target[1].value
+            }
+            arr.push(obj)
+            localStorage.setItem("students",JSON.stringify(arr))
+            form.reset()
+        }) 
+
+    </script>
+</body>
+</html>
