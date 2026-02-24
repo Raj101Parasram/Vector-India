@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">hello world</h1>
+    <p class="text">lol</p>
+
+    <input type="text" name="" id="inpbox">
+
+    <button id="btn">Click me</button>
+
+    <form action="" id="fom">
+        <input type="text" name="" id="forminp">
+        <button id="formid">submit</button>
+    </form>
+
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda rem fugiat, ipsam quam placeat doloremque magni! Ea dolorem, beatae debitis impedit eligendi, in adipisci dolor incidunt pariatur, deleniti odit?</p>
+    <script>
+        // getElementById()
+        let heading=document.getElementById("title")
+        
+
+        // querySelector()
+        let para=document.querySelector(".text")
+
+        // innerText = value
+        heading.innerText ="<p> welcom to jsDOM </p>"
+
+        //innerHTML
+        para.innerHTML="<h2>hi</h2>"
+
+        // .style
+        heading.style.color="red"
+        heading.style.backgroundColor="yellow"
+        heading.style.border="5px solid black"
+        heading.style.fontSize="40px"
+
+
+        // addEventListener("click")     mouse events
+        let button=document.querySelector("#btn")
+
+        button.addEventListener("click", function(e){
+            console.log("button clicked")
+            //document.body.innerHTML +="button clicked"     this line will exicute but after this progrm will not run 
+             //                                                anyremaning programing line or function
+        })
+
+        
+        // addEventListener("dblclick")      
+        button.addEventListener("dblclick", function(){
+            console.log("double clicked")
+        })
+
+
+        // addEventListener("mouseover")
+        button.addEventListener("mouseover", function(){
+            button.style.backgroundColor="yellow"
+        })
+
+
+        // addEventListener("mouseout")
+        button.addEventListener("mouseout", function(lol){
+            button.style.backgroundColor="white"
+        })
+
+
+        // addEventListener("keydown")        keybord events
+        let inp=document.querySelector("#inpbox") 
+        inp.addEventListener("keydown", function(){
+            console.log("keyt down")
+            //document.body.innerHTML +="key down"
+        })
+
+
+        // addEventListener("keyup")
+        inp.addEventListener("keyup", function(el){
+            console.log("key up")
+        })
+
+
+        // addEventListener("submit")          form events
+        let form=document.querySelector("#fom")
+        form.addEventListener("submit",function(e){
+            e.preventDefault()
+            console.log("form submited")
+        })
+
+
+        // addEventListener("focus")
+        let forminp=document.getElementById("forminp")
+        forminp.addEventListener("focus", function(e){
+            console.log("input focuse")
+        })
+
+
+        // addEventListener("blur")
+        forminp.addEventListener("blur", function(){
+            console.log("input left")
+        })
+
+
+        // addEventListener("load")            windows event
+        window.addEventListener("load", function(){
+            alert("page loaded")
+            console.log("page loaded")
+        })
+
+
+        // addEventListener("resize")
+        window.addEventListener("resize", function(){
+            console.log("windows resize")
+        })
+
+
+
+        // addEventListener("scroll")
+        window.addEventListener("scroll", function(){
+            console.log("scrollingg.....")
+        })
+        
+    </script>
+</body>
+</html>
