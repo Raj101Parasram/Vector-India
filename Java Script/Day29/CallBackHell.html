@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+       // console.log(fetch());                   "https://www.omdbapi.cm/swagger.json"
+       // console.log(Promise);
+
+
+       //    weather api
+       
+        let url="https://api.open-meteo.com/v1/forecast?latitude=17.38&longitude=78.48&current_weather=true"
+        async function getapidata(){
+            data=await fetch(url)
+            finaldata =await data.json()
+            console.log(finaldata)
+            //finaldata.forEach((val)=>{
+            //    let card=document.createElement('div')
+            //    card.innerHTML=`
+            //    <p>${val.latitude}</p>
+            //    <p>${val.longitude}</p>
+            //    <p>${val.generationtime_ms}</p>
+            //    <p>${val.current_weather.time}</p>
+            //    `
+            //    document.body.innerHTML=finaldata
+            //})
+            //display(finaldata)
+        }
+        getapidata()
+    </script>
+</body>
+</html>

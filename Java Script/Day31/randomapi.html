@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        //              random quotes app
+
+        async function getQuote() {
+    let url = "https://api.quotable.io/random";
+
+    let response = await fetch(url);
+    let data = await response.json();
+
+    console.log(data.content);
+    console.log(data.author);
+}
+
+getQuote();
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        function one(callback){
+    console.log('one')
+    callback()
+}
+
+function two(callback){
+    setTimeout(() => { 
+        console.log('two')
+        callback()
+    }, 2000);
+}
+
+function three(callback){
+    console.log('three')
+    callback()
+}
+function four(){
+    console.log('four')
+}
+
+one(()=>{
+    two(()=>{
+        three(()=>{
+            four()
+        })
+    })
+})
+
+let a= setInterval(function() {
+    console.log("Hello every 3 seconds");
+}, 3000);
+
+clearInterval(a)
+    </script>
+</body>
+</html>

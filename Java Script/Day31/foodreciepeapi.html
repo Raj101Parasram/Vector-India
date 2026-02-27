@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #contener{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            height: 100vh;
+            gap: 20px;
+            padding-left: 250px;
+            background-color: rgb(56, 123, 125);
+        }
+        .card{
+            width: 300px;
+            border: 1px solid black;
+            padding: 20px;
+            background-color: rgb(71, 108, 109);
+            border-radius: 30px;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            padding-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color:rgba(7, 97, 102, 0.57); text-align: center;"><h1>Food Recipe App</h1></header>
+    <div id="contener"></div>
+
+    <script>
+        //          food reciepe app
+
+        let food="https://api.spoonacular.com/recipes/complexSearch?query=biryani&apiKey=e04015ee07164a2cb1b75e7534465ec7"
+        async function Reciepe(){
+            data= await fetch(food)
+            reciepes=await data.json()
+            console.log(reciepes)
+            let contener=document.getElementById("contener")
+            reciepes.results.forEach((val)=>{
+                let card=document.createElement("div")
+                card.className="card"
+                card.innerHTML=`
+                <img src="${val.image}" alt="food image">
+                <h2>${val.title}</h2>
+                `
+                contener.append(card)
+            })
+        }
+        Reciepe()
+    </script>
+</body>
+</html>

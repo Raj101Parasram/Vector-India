@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        // weather app
+
+        let weather="https://api.open-meteo.com/v1/forecast?latitude=17.38&longitude=78.48&current_weather=true"
+        async function weatherapi(){
+            data=await fetch(weather)
+            fdata =await data.json()
+            console.log(fdata)
+            finaldata.forEach((val)=>{
+                let card=document.createElement('div')
+                card.innerHTML=`
+                <p>${val.latitude}</p>
+                <p>${val.longitude}</p>
+                <p>${val.generationtime_ms}</p>
+                <p>${val.current_weather.time}</p>
+                `
+                document.body.appendChild(card)
+            })
+            display(finaldata)
+        }
+        weatherapi()
+    </script>
+</body>
+</html>

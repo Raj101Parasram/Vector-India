@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #maindiv{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-left: 70px;
+        }
+        #maindiv div{
+            width: 300px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        .card{
+            align-items: center;
+            gap: 10px;
+            row-gap: 10px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Phone Productes API</h1>
+    <div id="maindiv"></div>
+
+
+
+    <script>
+        let url="https://kolzsticks.github.io/Free-Ecommerce-Products-Api/main/products.json"
+        async function getpro(){
+            let data=await fetch(url)
+            let fdata=await data.json()
+            let maindiv=document.getElementById('maindiv')
+            console.log(fdata)
+            fdata.forEach((val)=>{
+                let card=document.createElement('div')
+                card.innerHTML=`
+                <img src="${val.image}" alt="phone image">
+                <h1>${val.name}</h1>
+                <p><b>Category:</b> ${val.category}</p>
+                <p><b>Price:</b> ${val.priceCents}</p>
+                <p><b>Description:</b> ${val.description}</p>
+                <p><b>Stars:</b> ${val.rating.stars}</p>
+                <p><b>Count:</b> ${val.rating.count}</p>
+                `
+                maindiv.append(card)
+            })
+        }
+        getpro()
+    </script>
+</body>
+</html>
