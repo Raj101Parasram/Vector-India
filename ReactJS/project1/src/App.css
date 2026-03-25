@@ -1,0 +1,13 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.cart{
+  width: 20px;
+  color: aliceblue;
+  background-color: grey;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  padding-left: 200px;
+}

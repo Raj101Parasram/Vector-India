@@ -1,0 +1,55 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.con{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0px;
+}
+.card{
+  width: 23%;
+  align-items: center;
+  padding: 20px;
+  background-color: #525e6b;
+  border-radius: 50px;
+  gap: 10px;
+}
+.card img{
+  width: 80%;
+  height: 250px;
+  padding-left: 30px;
+}
+h1{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+.pinfo{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 10px;
+}
+.pinfo button{
+  width: 100%;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+p{
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+h3{
+  color: rgb(29, 12, 12);
+  font-size: 30px;
+  text-align: center;
+}
