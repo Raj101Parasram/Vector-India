@@ -20,8 +20,8 @@ let pm= mongoose.model("person",personsch)
 
 let app=express()
 app.listen(5000)
-
 app.use(express.json())
+
 app.post("/add",(req,res)=>{
     let data= new pm(req.body)
     data.save().then(()=>{
