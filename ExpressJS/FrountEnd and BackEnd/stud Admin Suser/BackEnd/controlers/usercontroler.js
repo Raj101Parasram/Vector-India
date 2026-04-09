@@ -14,7 +14,6 @@ let reg=async(req,res)=>{
             let data=new rm({...req.body,"pwd":hash})
             await data.save()
             res.json({"msg":"reg done"})
-
         }
 
     }
@@ -38,7 +37,6 @@ let login=async(req,res)=>{
             {
                 res.json({"msg":"check pwd"})
             }
-
         } 
         else
         {
@@ -52,4 +50,60 @@ let login=async(req,res)=>{
     }
 }
 
-module.exports={login,reg}
+let getuser=async(req,res)=>{
+    try
+    {
+        
+        let data=await rm.findById(req.params.uid)
+        
+        res.json(data)
+
+    }
+    catch
+    {
+        res.json({"msg":"error in search"})
+    }
+}
+
+let getusers=async(req,res)=>{
+    try
+    {
+        
+        let data=await rm.find({"role":"user"})
+        
+        res.json(data)
+
+    }
+    catch
+    {
+        res.json({"msg":"error in search"})
+    }
+}
+
+let upd=async(req,res)=>{
+    try
+    {
+        await rm.findByIdAndUpdate({"_id":req.body._id},req.body)
+        res.json({"msg":"updated"})
+
+    }
+    catch
+    {
+       res.json({"msg":"error in updation"}) 
+    }
+}
+
+let del=async(req,res)=>{
+    try
+    {
+        await rm.findByIdAndDelete(req.params.id)
+        res.json({"msg":"deleted"})
+
+    }
+    catch
+    {
+       res.json({"msg":"error in del"})  
+    }
+}
+
+module.exports={login,reg, getuser, getusers, upd, del}

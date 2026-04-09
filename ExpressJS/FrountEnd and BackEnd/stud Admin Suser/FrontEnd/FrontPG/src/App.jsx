@@ -1,3 +1,4 @@
+import { useState } from "react"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Nav from "./Nav"
 import Login from "./Login"
@@ -6,7 +7,8 @@ import User from "./User"
 import Admin from "./Admin"
 import Logout from "./Logout"
 import Ct from "./Ct"
-import { useState } from "react"
+import './App.css'
+import Upd from "./Ubd"
 
 let App=()=>{
   let [state,setSate]=useState({"name":"","role":"","_id":""})
@@ -15,18 +17,17 @@ let App=()=>{
   }
   let obj={"state":state,"updstate":updstate}
   return(
-    <BrowserRouter>
     <Ct.Provider value={obj}>
-      <Nav/>
+      <Nav />
       <Routes>
-        <Route path="/" element={<Login/>}/>
-        <Route path="/reg" element={<Reg/>}/>
-        <Route path="/user" element={<User/>}/>
-        <Route path="/admin" element={<Admin/>}/>
-        <Route path="/logout" element={<Logout/>}/>
+        <Route path="/" element={<Login />} />
+        <Route path="/reg" element={<Reg />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/upd/:id" element={<Upd/>} />
       </Routes>
     </Ct.Provider>
-    </BrowserRouter>
   )
 }
 export default App

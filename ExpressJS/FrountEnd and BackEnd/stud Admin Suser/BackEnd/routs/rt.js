@@ -1,7 +1,10 @@
 let express=require("express")
-const { login, reg } = require("../controlers/usercontroler")
+const { login, reg, getuser, getusers, del, upd } = require("../controlers/usercontroler")
 let rt=new express.Router()
 rt.post("/login",login)
 rt.post("/reg",reg)
-
+rt.get("/getuser/:uid",getuser)
+rt.get("/getusers",getusers)
+rt.put("/upd",upd)
+rt.delete("/del/:id",del)
 module.exports=rt
