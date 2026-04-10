@@ -10,9 +10,7 @@ mongoose.connect("mongodb://localhost:27017/fndtest").then(()=>{
 })
 
 let app=express()
-app.listen(5000)
 app.use(express.json())
 app.use(cors())
-
-
 app.use("/",rt)
+app.listen(5000)

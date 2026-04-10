@@ -1,7 +1,9 @@
 let express= require("express")
-const reg = require("../controller/ctn")
+const {reg, disp} = require("../controller/ctn")
 
 let rt= new express.Router()
-rt.post("/",reg)
+
+rt.get("/",disp)
+rt.post("/add",reg)
 
 module.exports=rt
