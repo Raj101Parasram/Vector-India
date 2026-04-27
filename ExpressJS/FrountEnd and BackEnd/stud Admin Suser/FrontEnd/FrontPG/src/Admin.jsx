@@ -16,7 +16,7 @@ let Admin=()=>{
       })
 
     }
-    return(<div>
+    return(<div className="admintab">
       <table border={1}>
         <tr><th>SNO</th> <th>Name</th><th>UID</th><th>Phno</th><th>Gender</th><th>Marks</th></tr>
         {

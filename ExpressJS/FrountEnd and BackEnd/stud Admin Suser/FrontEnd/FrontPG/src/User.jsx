@@ -34,13 +34,14 @@ let User=()=>{
       })
     }
     return(
-    <div>
+    <div className='userdiv'>
       {msg!=""&&<h2 style={{"color":"red"}}>{msg}</h2>}
       <input type='text' placeholder='Enter email' onChange={(e)=>setUid(e.target.value)} value={uid}/>
       <button onClick={search}>Search</button>
     {
       data._id!=undefined&&
       <table border={1}>
+        <tbody>
         <tr>
           <th>UID</th><td>{data._id}</td>
         </tr>
@@ -48,6 +49,7 @@ let User=()=>{
          <tr><th>Phno</th><td>{data.phno}</td></tr>
           <tr><th>Gender</th><td>{data.gen}</td></tr>
            <tr><th>Marks</th><td>{data.marks!=undefined?data.marks:"pending..."}</td></tr>
+        </tbody>
         
       </table>
     }

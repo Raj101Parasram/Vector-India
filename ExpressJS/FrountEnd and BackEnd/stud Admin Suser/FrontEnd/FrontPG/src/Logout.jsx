@@ -10,7 +10,7 @@ let Logout=()=>{
     navigate("/")
     },[])
     return(
-        <div>
+        <div className='logoutdiv'>
             Logout
         </div>
     )
