@@ -9,7 +9,6 @@ let Admin=()=>{
     axios.get("http://localhost:5000/getusers").then((res)=>{
       setData(res.data)
     })
-
     },[f])
     let del=(id)=>{
       axios.delete(`http://localhost:5000/del/${id}`).then(()=>{

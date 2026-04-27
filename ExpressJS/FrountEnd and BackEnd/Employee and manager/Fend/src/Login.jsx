@@ -15,8 +15,9 @@ let Login=()=>{
     }
 
     let login=()=>{
-        axios.post("https://localhost:5000/login", data).then((res)=>{
-            if(res.data.msg==undefined){
+        axios.post("http://localhost:5000/login", data).then((res)=>{
+            if(res.data.msg==undefined)
+            {
                 obj.updstate(res.data)
                 if(res.data.role=="manager"){
                     navigate("/manager")
@@ -35,9 +36,9 @@ let Login=()=>{
     return(
         <div className="mainlogin">
             <div className="loginform">
-                <h2 style={{"color":"red"}}>{msg}</h2>
+                <h2 style={{"color": "red"}}>{msg}</h2>
                 <input type="text" placeholder="Enter Employee Id" name="_id" value={data._id} onChange={fun}/>
-                <input type="password" placeholder="Enter Password" name="_id" value={data.pwd} onChange={fun}/>
+                <input type="password" placeholder="Enter Password" name="pwd" value={data.pwd} onChange={fun}/>
                 <button onClick={login}>Login</button>
             </div>
         </div>

@@ -6,6 +6,9 @@ import Login from "./Login"
 import Employee from "./Employee"
 import Ct from "./Ct"
 import { useState } from "react"
+import Logout from "./Logout"
+import Upd from "./Upd"
+import "./App.css"
 
 
 let App=()=>{
@@ -22,6 +25,8 @@ let App=()=>{
       <Route path="/login" element={<Login/>} />
       <Route path="/manager" element={<Manager/>} />
       <Route path="/employee" element={<Employee/>} />
+      <Route path="/logout" element={<Logout/>}/>
+      <Route path="/edt/:id" element={<Upd/>}/>
     </Routes>
     </Ct.Provider>
   )

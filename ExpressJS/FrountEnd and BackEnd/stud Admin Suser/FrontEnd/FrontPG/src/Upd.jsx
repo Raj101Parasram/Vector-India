@@ -30,7 +30,7 @@ let Upd=()=>{
         <input type='text' name='phno' placeholder='Enter phno' value={data.phno} onChange={fun}/>
         <p>
           <input type='radio' name='gen' value="male" checked={data.gen=="male"} onChange={fun}/>Male
-            <input type='radio' name='gen' value="female" checked={data.gen=="female"} onChange={fun}/>Female
+          <input type='radio' name='gen' value="female" checked={data.gen=="female"} onChange={fun}/>Female
         </p>
         <input type='number' name='marks' placeholder='Enter marks' value={data.marks} onChange={fun}/>
         <button onClick={upd}>update</button>

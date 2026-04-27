@@ -55,7 +55,6 @@ let getuser=async(req,res)=>{
     {
         
         let data=await rm.findById(req.params.uid)
-        
         res.json(data)
 
     }

@@ -26,7 +26,7 @@ let login= async(req,res)=>{
         if(obj){
             let data= await bcrypt.compare(req.body.pwd,obj.pwd)
             if(data){
-                res.json({"name":obj.name, "_id":obj._id})
+                res.json({"name":obj.name, "_id":obj._id, "role":obj.role})
             }
             else{
                 res.json({"msg":"Password is Wrong"})
@@ -42,5 +42,67 @@ let login= async(req,res)=>{
 }
 
 
+let emp= async(req,res)=>{
+    try
+    {
+        let data= await med.findById(req.params.empid)
+        res.json(data)  
+    }
+    catch
+    {
+        res.json({"msg":"error in employee searching"})
+    }
+}
 
-module.exports={reg, login}
+let manager= async(req,res)=>{
+    try
+    {
+        let data=await med.find({"role":"employee"})
+        res.json(data)
+    }
+    catch
+    {
+        res.json({"msg":"Error in manager page"})
+    }
+}
+
+let del= async(req,res)=>{
+    try
+    {
+        await med.findByIdAndDelete(req.params.id)
+        res.json({"msg":"Deleted"})
+    }
+    catch
+    {
+        res.json({"msg":"error in delete"})
+    }
+}
+
+let edt = async (req, res) => {
+    try {
+        await med.findByIdAndUpdate(req.body._id, {
+            ...req.body,
+            status: "pending"   // 🔥 reset status
+        })
+        res.json("Edit completed")
+    }
+    catch {
+        res.json("Error in edit")
+    }
+}
+
+
+let status = async (req, res) => {
+    try {
+        await med.findByIdAndUpdate(req.params.id, {
+            status: "completed"
+        })
+        res.json({ msg: "Status Updated" })
+    }
+    catch {
+        res.json({ msg: "Error updating status" })
+    }
+}
+
+
+module.exports={reg, login, emp, manager, del, edt, status}

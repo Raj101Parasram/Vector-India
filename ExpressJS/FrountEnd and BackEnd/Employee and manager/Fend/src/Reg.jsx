@@ -9,7 +9,7 @@ let Reg=()=>{
         setData({...data,[e.target.name]:e.target.value})
     }
     let add=()=>{
-        axios.post("https://localhost:5000/reg", data).then((res)=>{
+        axios.post("http://localhost:5000/reg", data).then((res)=>{
             setMsg(res.data.msg)
             if(res.data.msg=="Employee details is create"){
                 setData({"_id":"", "name":"", "pwd":""})
@@ -19,7 +19,7 @@ let Reg=()=>{
     return(
         <div className="mainreg">
             <div className="regform">
-                <h2 style={{"color":"red"}}>{msg}</h2>
+                <h2>{msg}</h2>
                 <input type="text" placeholder="Enter Employee ID" name="_id" value={data._id} on onChange={fun} />
                 <input type="text" placeholder="Enter Employee Name" name="name" value={data.name} on onChange={fun} />
                 <input type="password" placeholder="Enter Employee Password" name="pwd" value={data.pwd} on onChange={fun} />

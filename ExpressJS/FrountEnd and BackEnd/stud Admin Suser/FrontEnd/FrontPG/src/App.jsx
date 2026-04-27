@@ -8,7 +8,7 @@ import Admin from "./Admin"
 import Logout from "./Logout"
 import Ct from "./Ct"
 import './App.css'
-import Upd from "./Ubd"
+import Upd from "./Upd"
 
 let App=()=>{
   let [state,setSate]=useState({"name":"","role":"","_id":""})
