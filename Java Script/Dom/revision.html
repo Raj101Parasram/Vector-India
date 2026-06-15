@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="title">hello world</h1>
+    <h1 id="title2">hello world</h1>
+    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Ad possimus repellat eaque illum doloribus corrupti dignissimos veniam quos nisi. Corporis, illo facilis.
+         Accusantium quibusdam, rem vel molestias asperiores nulla aperiam?</p>
+
+    <p id="para"></p>
+    <button id="btnchange">Change Text</button>
+
+    <div class="div1"></div>
+
+    
+    <input type="text" name="" id="inpbox">
+    <button id="btn">Click me</button>
+
+
+    <form action="" id="fom">
+        <input type="text" name="" id="forminp">
+        <button id="formbtn">submit</button>
+    </form>
+
+    <script>
+
+        let h1el= document.getElementById("title")
+        let h1el2= document.getElementById("title2")
+        let chngbtn= document.getElementById("btnchange")
+        let btpara= document.querySelector("#para")
+
+        // event listener for click event
+
+        chngbtn.addEventListener("click", function(){
+            h1el.innerHTML += " welcome to jsDom"
+            h1el2.innerHTML = " welcome to jsDom"
+            btpara.innerText = "Button is clicked"
+        })
+
+        // querySelector  and styles
+
+        let fbtnn= document.querySelector("button")
+        fbtnn.style.backgroundColor="black"
+        fbtnn.style.color="white"
+        fbtnn.style.padding="10px 20px"
+
+            // click event for changing color of first button
+
+            fbtnn.innerText +=" Click me to change color"
+
+            fbtnn.addEventListener("click", function(){
+                if(fbtnn.style.backgroundColor == "black"){
+                    fbtnn.style.backgroundColor = "red";
+                }
+                else{
+                    fbtnn.style.backgroundColor = "black";
+                }
+            });
+
+
+        let divv= document.getElementsByClassName("div1")[0]
+        divv.innerHTML = "<input type='text' placeholder='enter your name'> <button>submit</button>"
+        divv.innerHTML += "<p> lorem ipsum dolor. </p>    <h1>hiiiiiiiiiii</h1>"
+
+
+        //  mouse hover event and querySelectorAll and forEach loop. 
+        
+        let inptext= document.querySelectorAll("input")
+
+        inptext.forEach(function(input){          // we use forEach loop because applying event listener to all input tags.
+            input.addEventListener("mouseover", function(){
+                input.style.backgroundColor = "yellow"
+            })
+            input.addEventListener("mouseout", function(){
+                input.style.backgroundColor = "white"
+            })
+        })
+
+
+        // form events
+
+        let formm= document.getElementById("fom")
+
+        formm.addEventListener("submit", function(e){
+            e.preventDefault()  // it will store the data in the form and will not refresh the page when we click on submit button.
+            let forminput= document.getElementById("forminp").value
+            alert("Form submitted with input: " + forminput)
+        })
+        
+        let forminput= document.getElementById("forminp")
+        forminput.addEventListener("focus", function(){
+            forminput.style.backgroundColor = "blue"
+        })
+        forminput.addEventListener("blur", function(){
+            forminput.style.backgroundColor = "purple"
+        })
+
+        
+
+    </script>
+</body>
+</html>

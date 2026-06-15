@@ -45,10 +45,10 @@
         let para=document.querySelector(".text")
 
         // innerText = value
-        heading.innerText ="<p> welcom to jsDOM </p>"
+        heading.innerHTML ="<p> welcom to jsDOM </p>"
 
         //innerHTML
-        para.innerHTML="<h2>hi</h2>"
+        para.innerText="<h2>hi</h2>"
 
         // .style
         heading.style.color="red"
@@ -62,7 +62,7 @@
 
         button.addEventListener("click", function(e){
             console.log("button clicked")
-            //document.body.innerHTML +="button clicked"     this line will exicute but after this progrm will not run 
+            document.body.innerHTML +="button clicked"    // this line will exicute but after this progrm will not run 
              //                                                anyremaning programing line or function
         })
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p class="cp1"></p>
+
+    <script>
+        let p1=document.getElementById("p1")
+        p1.innerHTML="Hello World" //innerHTML is used to change the content of an element
+        p1.style.color="red" //style is used to change the style of an element
+
+
+        let cp1=document.getElementsByClassName("cp1")
+        cp1[0].innerHTML="Hello World 1"
+        cp1[0].style.color="red"
+        cp1[0].style.fontSize="30px"
+        cp1[0].style.fontFamily="Arial"
+        cp1.innerHTML="Hello World 2"  //whay this line is not working? besause cp1 is a collection of elements and we need to specify which element we want to change  
+        
+    </script>
+</body>
+</html>

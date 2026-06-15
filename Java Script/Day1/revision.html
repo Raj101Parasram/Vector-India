@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let arr=[1,6,8,3,4,9,72,3,4]
+        arr.sort(function(a,b){
+            return a-b
+        })
+        console.log(arr)
+
+        for (let i = 0; i < arr.length; i++) { 
+            if (arr[i] % 2 === 0) {
+                console.log(arr[i] + " is Even");
+            }
+            else {
+                console.log(arr[i] + " is Odd");
+            }
+        }
+
+        let lrg=0
+        for (let i = 0; i < arr.length; i++)
+        {
+            for (let j = 0; j < arr.length; j++)
+            {
+                if(arr[i] < arr[j])
+                {
+                    lrg = arr[j]
+                }
+            }
+        }
+        console.log(lrg)
+
+        let largest= arr[0]
+        for (let i = arr[1]; i < arr.length; i++)
+        {
+            if(arr[i] > largest)
+            {
+                largest = arr[i]
+            }
+        }
+        console.log(largest)
+
+        let prime= (arr)=>{
+            for (let i = 0; i< arr.length; i++)
+            {
+                let isprime=true
+                if(arr[i]<= 1)
+                {
+                    console.log( arr[i] + " not a prime number")
+                }
+                else{
+                    for (let j = 2; j < arr[i]; j++)
+                    {
+                        if(arr[i] % j === 0)
+                        {
+                            isprime=false
+                            break
+                        }
+                    }
+                    if(isprime)
+                    {
+                        console.log( arr[i] + " is a prime number")
+                    }
+                    else
+                    {
+                        console.log( arr[i] + " not a prime number")
+                    }
+                }
+            }
+        }
+        console.log(prime(arr))
+
+        let str= "HelloWorlde"
+        let rev=""
+
+        for (let i = str.length-1; i>=0; i--)
+        {
+            rev= rev + str[i]
+        }
+        console.log(rev)
+
+        let count=0
+        for (let j= 0; j< str.length; j++){
+            if(str[j]==="e" || str[j]==="a" || str[j]==="i" || str[j]==="o" || str[j]==="o" || str[j]==="u"){
+                count = count + 1
+            }
+        }
+
+        console.log(count)
+        
+    </script>
+</body>
+</html>

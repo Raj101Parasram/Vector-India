@@ -9,12 +9,18 @@ let Reg=()=>{
         setData({...data,[e.target.name]:e.target.value})
     }
     let add=()=>{
-        axios.post("http://localhost:5000/reg", data).then((res)=>{
-            setMsg(res.data.msg)
-            if(res.data.msg=="Employee details is create"){
-                setData({"_id":"", "name":"", "pwd":""})
-            }
-        })
+        if(data._id=="" && data.name=="" && data.pwd==""){
+            setMsg("All fields are required")
+        }
+        else
+        {
+            axios.post("http://localhost:5000/reg", data).then((res)=>{
+                setMsg(res.data.msg)
+                if(res.data.msg=="Employee details is create"){
+                    setData({"_id":"", "name":"", "pwd":""})
+                }
+            })
+        }
     }
     return(
         <div className="mainreg">
